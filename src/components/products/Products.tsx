@@ -1,105 +1,106 @@
-// 'use client'
+'use client'
 
-// import { motion } from 'framer-motion'
-// import Image from 'next/image'
-// import { ArrowRight } from 'lucide-react'
-// import Container from '@/components/shared/Container'
-// import { PRODUCTS_DATA } from '@/data'
-// import type { ProductItem } from '@/types'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
+import Container from '@/components/shared/Container'
+import { PRODUCTS_DATA } from '@/data'
+import type { ProductItem } from '@/types'
+import type { Variants } from 'framer-motion'
 
-// const containerVariants = {
-//   hidden: {},
-//   visible: { transition: { staggerChildren: 0.15 } },
-// }
+const containerVariants : Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.15 } },
+}
 
-// const cardVariants = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
-// }
+const cardVariants : Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
+}
 
-// export default function Products() {
-//   return (
-//     <section className="py-16 md:py-20" style={{ backgroundColor: '#4A90C4' }}>
-//       <Container>
-//         {/* Section Heading */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//           className="text-center mb-12"
-//         >
-//           <h2
-//             className="font-montserrat font-700 text-white tracking-widest"
-//             style={{ fontSize: '14px', letterSpacing: '4px' }}
-//           >
-//             OUR PRODUCTS
-//           </h2>
-//           <div className="w-10 h-0.5 bg-white/60 mx-auto mt-3" />
-//         </motion.div>
+export default function Products() {
+  return (
+    <section className="py-16 md:py-20" style={{ backgroundColor: '#83afd1ff' }}>
+      <Container>
+        {/* Section Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2
+            className="text-[14px] lg:text-[25px] 2xl:text-[30px] font-bold  text-white tracking-widest"
+            style={{  letterSpacing: '1px' }}
+          >
+            OUR PRODUCTS
+          </h2>
+          <div className="w-10 h-0.5 bg-white/60 mx-auto mt-3" />
+        </motion.div>
 
-//         {/* Products Grid */}
-//         <motion.div
-//           variants={containerVariants}
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true }}
-//           className="grid grid-cols-1 md:grid-cols-3 gap-5"
-//         >
-//           {PRODUCTS_DATA.map((product) => (
-//             <ProductCard key={product.id} product={product} />
-//           ))}
-//         </motion.div>
-//       </Container>
-//     </section>
-//   )
-// }
+        {/* Products Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
+          {PRODUCTS_DATA.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </motion.div>
+      </Container>
+    </section>
+  )
+}
 
-// function ProductCard({ product }: { product: ProductItem }) {
-//   return (
-//     <motion.article
-//       variants={cardVariants}
-//       whileHover={{ y: -6, boxShadow: '0 20px 50px rgba(0,0,0,0.18)' }}
-//       className="group relative rounded-xl overflow-hidden bg-white cursor-pointer transition-all duration-300"
-//       style={{ minHeight: '280px' }}
-//     >
-//       {/* Product Image */}
-//       <div className="relative w-full h-52 overflow-hidden">
-//         <Image
-//           src={product.imageSrc}
-//           alt={product.imageAlt}
-//           fill
-//           className="object-cover transition-transform duration-500 group-hover:scale-105"
-//           sizes="(max-width: 768px) 100vw, 33vw"
-//         />
-//         {/* Subtle gradient at bottom */}
-//         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-//       </div>
+function ProductCard({ product }: { product: ProductItem }) {
+  return (
+    <motion.article
+      variants={cardVariants}
+      whileHover={{
+        y: -6,
+        boxShadow: '0 20px 50px rgba(0,0,0,0.18)',
+      }}
+      className="group relative overflow-hidden rounded-2xl bg-white transition-all duration-300"
+    >
+      {/* Product Image */}
+      <div className="relative aspect-[4/5] w-full overflow-hidden">
+        <Image
+          src={product.imageSrc}
+          alt={product.imageAlt}
+          fill
+          priority={false}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
 
-//       {/* Card Footer */}
-//       <div className="flex items-end justify-between p-4">
-//         <div>
-//           <h3
-//             className="font-montserrat font-700 text-darkText leading-tight"
-//             style={{ fontSize: '13px', letterSpacing: '0.5px', fontWeight: 700 }}
-//           >
-//             {product.title}
-//           </h3>
-//           {product.subtitle && (
-//             <span
-//               className="font-montserrat font-700 text-darkText"
-//               style={{ fontSize: '13px', letterSpacing: '0.5px', fontWeight: 700 }}
-//             >
-//               {product.subtitle}
-//             </span>
-//           )}
-//         </div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+      </div>
 
-//         {/* Arrow button */}
-//         <div className="w-8 h-8 rounded-full bg-primaryBlue flex items-center justify-center flex-shrink-0 group-hover:bg-blue-700 transition-colors">
-//           <ArrowRight size={14} className="text-white" />
-//         </div>
-//       </div>
-//     </motion.article>
-//   )
-// }
+      {/* Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between p-5">
+        <div className="pr-4">
+          <h3
+          className="text-[15px] lg:text-[18px] 2xl:text-[20px] font-bold leading-tight text-white"
+            style={{letterSpacing: '0.5px'}} >
+            {product.title}
+          </h3>
+        </div>
+
+        {/* Arrow */}
+        <div
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-primaryBlue"
+        >
+          <ArrowRight
+            size={15}
+            className="text-white"
+          />
+        </div>
+      </div>
+    </motion.article>
+  )
+}

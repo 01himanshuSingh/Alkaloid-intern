@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Geologica } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Geologica, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -11,7 +11,11 @@ const geologica = Geologica({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-
+const libreBaskerville = Libre_Baskerville({
+  subsets: ['latin'],
+  variable: '--font-baskerville',
+  weight: ['400', '700'],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={geologica.className}
+      className={`${geologica.className} ${libreBaskerville.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
