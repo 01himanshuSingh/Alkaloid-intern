@@ -15,8 +15,8 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
   return (
     <section
       aria-labelledby="milestone-heading"
-      className="relative  w-full overflow-hidden"
-      style={{ minHeight: "440px" }}
+      className="relative  w-full overflow-hidden min-h-[50vh] lg:min-h-[65vh] xl:min-h-[70vh] "
+
     >
       <motion.div
         variants={imageScaleVariants}
@@ -64,7 +64,7 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
           <p
             id="milestone-heading"
             className="font-geologica text-white font-light leading-snug"
-            style={{ fontSize: "clamp(1rem, 2.8vw, 1.5rem)" }}
+            style={{ fontSize: "clamp(1rem, 2.8vw, 1.4rem)" }}
           >
             {data.text}
           </p>

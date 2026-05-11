@@ -44,7 +44,7 @@ export function HistoryHero({ data }: HistoryHeroProps) {
       />
 
       {/* Logo — top left */}
-      <div className="absolute top-5 left-5 sm:top-7 sm:left-8 z-10">
+      {/* <div className="absolute top-5 left-5 sm:top-7 sm:left-8 z-10">
         <Image
           src={data.logoSrc}
           alt={data.logoAlt}
@@ -53,7 +53,7 @@ export function HistoryHero({ data }: HistoryHeroProps) {
           className="w-24 sm:w-32 md:w-36 h-auto object-contain"
           priority
         />
-      </div>
+      </div> */}
 
       {/* Editorial heading — top right */}
       <motion.header
