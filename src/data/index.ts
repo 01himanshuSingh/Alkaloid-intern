@@ -103,5 +103,5 @@ export const QUICK_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
-  { label: "Contact", href: "/contact" },
+  { label: "History", href: "/history" },
 ];
