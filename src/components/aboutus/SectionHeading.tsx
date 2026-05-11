@@ -5,6 +5,7 @@ interface SectionHeadingProps {
   children: React.ReactNode;
   className?: string;
   variant?: "olive" | "white" | "dark";
+  id?: string;
 }
 
 export default function SectionHeading({
