@@ -2,7 +2,7 @@ import type { EventItem, ProductItem, FeatureItem, NavLink } from "@/types";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "Manufacturing", href: "/manufacturing" },
   { label: "R&D", href: "/research" },

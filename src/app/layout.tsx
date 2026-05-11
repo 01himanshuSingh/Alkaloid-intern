@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Geologica, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
   
@@ -42,7 +44,10 @@ export default function RootLayout({
       lang="en"
       className={`${geologica.className} ${libreBaskerville.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col"><Navbar/>
+      {children}
+      <Footer/>
+      </body>
     </html>
   );
 }
