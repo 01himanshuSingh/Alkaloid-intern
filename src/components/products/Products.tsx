@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronRight, ChevronRightCircleIcon } from 'lucide-react'
 import Container from '@/components/shared/Container'
 import { PRODUCTS_DATA } from '@/data'
 import type { ProductItem } from '@/types'
@@ -31,7 +31,7 @@ export default function Products() {
           className="text-center mb-12"
         >
           <h2
-            className="text-[14px] lg:text-[25px] 2xl:text-[30px] font-bold  text-white tracking-widest"
+            className="text-sm md:text-base lg:text-[28px] 2xl:text-[35px] font-semibold  text-white tracking-widest"
             style={{  letterSpacing: '1px' }}
           >
             OUR PRODUCTS
@@ -78,14 +78,13 @@ function ProductCard({ product }: { product: ProductItem }) {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-      </div>
+        </div>
 
       {/* Content */}
       <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between p-5">
         <div className="pr-4">
           <h3
-          className="text-[15px] lg:text-[18px] 2xl:text-[20px] font-bold leading-tight text-white"
+          className="text-[15px] lg:text-[18px] 2xl:text-[20px] font-bold leading-tight text-[#0B67B2]"
             style={{letterSpacing: '0.5px'}} >
             {product.title}
           </h3>
@@ -93,11 +92,11 @@ function ProductCard({ product }: { product: ProductItem }) {
 
         {/* Arrow */}
         <div
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 group-hover:bg-primaryBlue"
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full hover:cursor-pointer hover:bg-[#0B67B2] backdrop-blur-sm transition-all duration-300 group-hover:bg-primaryBlue"
         >
-          <ArrowRight
+          <ChevronRight
             size={15}
-            className="text-white"
+            className="text-[#0B67B2] hover:text-white"
           />
         </div>
       </div>

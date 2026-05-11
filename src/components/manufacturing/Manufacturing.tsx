@@ -45,7 +45,7 @@ export default function Manufacturing() {
   </h2>
 
   <div className="pl-4 md:pl-6">
-    <p className="text-gray-700 font-800 text-[15px] lg:text-[15px] 2xl:text-[17px] font-body leading-[1.85] mb-6">
+    <p className="text-gray-700 font-800 text-[15px] lg:text-[15px] 2xl:text-[17px]  font-body leading-[1.85] mb-6">
       For over three decades, our manufacturing facility has been operating in full compliance
       with ICH cGMP guidelines and other regulatory standards. Engineered for precision, it has
       dedicated blocks for extraction, isolation, reaction, purification and finalisation, all
@@ -78,7 +78,7 @@ export default function Manufacturing() {
       <div className="relative mx-auto w-full max-w-sm">
         {/* Top Hexagon */}
         <HexagonCard
-          imageSrc="/PNG/Screenshot 2026-05-09 165134.png"
+          imageSrc="/Homepage/manufacturing and sourcing 1.png"
           imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
           widthClass="w-[220px]"
           heightClass="h-[248px]"
@@ -88,11 +88,11 @@ export default function Manufacturing() {
 
         {/* Bottom Hexagon */}
         <HexagonCard
-          imageSrc="/PNG/Screenshot 2026-05-09 165134.png"
+          imageSrc="/Homepage/manufacturing and sourcing 2.png"
           imageAlt="Pharmaceutical manufacturing experts inspecting production line"
           widthClass="w-[200px]"
           heightClass="h-[226px]"
-        positionClass="ml-4 mt-2 md:ml-6 md:-mt-[60px]"
+        positionClass="ml-4 mt-2 md:ml-6 md:-mt-[60px] "
         />
       </div>
     </motion.section>
@@ -104,30 +104,7 @@ export default function Manufacturing() {
 
 
 
-function HexBorder({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative w-full h-full">
-      {/* Green border layer */}
-      <div
-        className="absolute inset-0"
-        style={{
-          clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)',
-          backgroundColor: '#8AB04A',
-          transform: 'scale(1.04)',
-        }}
-      />
-      {/* Image layer */}
-      <div
-        className="absolute inset-0 overflow-hidden"
-        style={{
-          clipPath: 'polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)',
-        }}
-      >
-        {children}
-      </div>
-    </div>
-  )
-}
+
 
 
 interface HexagonCardProps {
@@ -138,6 +115,8 @@ interface HexagonCardProps {
   positionClass?: string
   priority?: boolean
 }
+
+
 
 function HexagonCard({
   imageSrc,
@@ -154,33 +133,20 @@ function HexagonCard({
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7 }}
-      className={`relative ${widthClass} ${heightClass} ${positionClass}`}
+      className={`relative overflow-hidden rounded-2xl ${widthClass} ${heightClass} ${positionClass}`}
     >
-      {/* Border Layer */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 scale-[1.04] bg-[#88A933]"
-        style={{
-          clipPath: HEXAGON_CLIP_PATH,
-        }}
-      />
+      {/* Image */}
+      <Image
+  src={imageSrc}
+  alt={imageAlt}
+  fill
+  priority={priority}
+  sizes="(max-width: 768px) 100vw, 320px"
+  className="object-cover  brightness-[1.08] contrast-[1.02] transition-transform duration-700 hover:scale-105"
+  style={{ objectFit: 'cover' }}
+/>
 
-      {/* Image Layer */}
-      <div
-        className="absolute inset-0 overflow-hidden"
-        style={{
-          clipPath: HEXAGON_CLIP_PATH,
-        }}
-      >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          priority={priority}
-          sizes="(max-width: 768px) 220px, 300px"
-          className="object-cover"
-        />
-      </div>
-    </motion.figure>
+     </motion.figure>
   )
 }
+

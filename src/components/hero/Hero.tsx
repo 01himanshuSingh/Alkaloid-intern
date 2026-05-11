@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="hero-bg-animate w-full h-full">
           <Image
-            src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1600&auto=format&fit=crop&q=80"
+            src="/Homepage/cover image.png"
             alt="Alkaloids pharmaceutical manufacturing facility"
             fill
             priority
@@ -25,7 +25,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6  lg:px-16 pt-20">
+      <div className="relative z-10 w-full max-w-7xl lg:max-w-7xl 2xl:max-w-[1690px] mx-auto px-6  lg:px-16 pt-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left Content */}
           <div className="flex-1 max-w-xl">
@@ -33,7 +33,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="font-montserrat text-white whitespace-nowrap font-bold leading-none mb-6     text-5xl  lg:text-6xl xl:text-7xl 2xl:text-[110px]"
+              className="font-montserrat text-white/90 whitespace-nowrap font-bold leading-none mb-6     text-5xl  lg:text-6xl xl:text-7xl 2xl:text-[110px]"
               style={{
                
                 letterSpacing: '-2px',
@@ -46,7 +46,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-              className="font-inter text-white/85 text-xs lg:text-sm  2xl:text-base  leading-relaxed mb-8 pl-2 md:pl-6 max-w-sm"
+              className="font-['Libre_Baskerville',serif] text-white/75 text-xs lg:text-sm  2xl:text-[20px]  leading-relaxed mb-8 pl-2 md:pl-6 max-w-sm lg:max-w-lg 2xl:max-w-4xl"
             >
               Specialising in Phyto-based APIs and Standard and Botanical
               Extract as APIs with a focus on Priority and Niche molecules,
@@ -70,24 +70,7 @@ export default function Hero() {
 </motion.div>
           </div>
 
-          {/* Right — Play Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.5, ease: 'easeOut' }}
-            className="flex-shrink-0"
-          >
-            <button
-              aria-label="Play company video"
-              className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 backdrop-blur-sm group"
-            >
-              <Play
-                className="text-primaryBlue ml-1 group-hover:scale-110 transition-transform"
-                size={30}
-                fill="#0B67B2"
-              />
-            </button>
-          </motion.div>
+    
         </div>
       </div>
     </section>

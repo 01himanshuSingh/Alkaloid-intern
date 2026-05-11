@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#005A9C' }} className="py-12 md:py-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 lg:gap-10">
           {/* Logo Column */}
           <div className="flex flex-col">
             <APLLogoWhite />
@@ -18,7 +18,7 @@ export default function Footer() {
             <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR OFFICE
             </h4>
-            <address className="not-italic font-inter text-white/70 text-[12px] leading-[1.9]">
+            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
               Alkaloids Private Limited, 706,<br />
               Geeva Fountainhead, H.UDA<br />
               Techno Enclave, Madhapur,<br />
@@ -32,7 +32,7 @@ export default function Footer() {
             <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR FACTORY
             </h4>
-            <address className="not-italic font-inter text-white/70 text-[12px] leading-[1.9]">
+            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
               Survey No 25/3, Shop No 3,<br />
               Medical, 99, Gandhi<br />
               Pochampudi Village Road,<br />
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-[#88A933] text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               QUICK LINKS
             </h4>
             <nav>
@@ -52,7 +52,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="font-inter text-white/70 text-[12px] hover:text-white transition-colors duration-200"
+                      className="font-[Libre_Baskerville] text-[#88A933] text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] hover:text-white transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/15">
-          <p className="font-inter text-white/50 text-[11px] text-center">
+          <p className="font-inter text-white/50 text-[12px] lg:text-[13px] 2xl:text-[15px] text-center">
             © {new Date().getFullYear()} Alkaloids Private Limited. All rights reserved.
           </p>
         </div>

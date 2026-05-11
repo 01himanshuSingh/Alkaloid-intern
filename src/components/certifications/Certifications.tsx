@@ -8,35 +8,35 @@ const CERTIFICATIONS = [
   {
     id: 'fda',
     name: 'FDA Approved',
-    imageSrc: '/PNG/fda.logo.png',
+    imageSrc: '/Homepage/Certifications- FDA.png',
     width: 90,
     height: 50,
   },
   {
     id: 'who',
     name: 'WHO GMP Certified',
-    imageSrc: '/PNG/gmplogo.jpg',
+    imageSrc: '/Homepage/Certifications- CDSCO.png',
     width: 90,
     height: 50,
   },
   {
     id: 'edqm',
     name: 'EDQM Certified',
-    imageSrc: '/PNG/edqmm2.png',
+    imageSrc: '/Homepage/Certifications- Edqm.png',
     width: 110,
     height: 50,
   },
   {
     id: 'aifa',
     name: 'AIFA Certified',
-    imageSrc: '/PNG/Aifadummy.jpg',
+    imageSrc: '/Homepage/Certifications- Aifa.png',
     width: 90,
     height: 50,
   },
   {
     id: 'mfds',
     name: 'MFDS Korea',
-    imageSrc: '/PNG/dummymfs.jpg',
+    imageSrc: '/Homepage/Certifications-Ministry of public safety and security.png',
     width: 120,
     height: 50,
   },
@@ -44,14 +44,14 @@ const CERTIFICATIONS = [
 
 export default function Certifications() {
   return (
-    <section className="bg-white py-10 border-b border-gray-100">
+    <section className="bg-white py-10 ">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16"
+          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 2xl:gap-20"
         >
           {CERTIFICATIONS.map((cert, idx) => (
          <motion.div
@@ -60,7 +60,7 @@ export default function Certifications() {
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   transition={{ duration: 0.5, delay: idx * 0.1 }}
- className="w-[140px] h-[80px] flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+ className="w-[140px] h-[80px] 2xl:w-[190px] 2xl:h-[130px]  flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
 >
   <Image
     src={cert.imageSrc}

@@ -47,7 +47,7 @@ export default function MarketsSection({ data }: MarketsSectionProps) {
 
         {/* Map with region labels */}
         <motion.div
-          className="relative w-full max-w-4xl mx-auto"
+          className="relative w-full max-w-4xl lg:max-w-5xl 2xl:max-w-5xl  mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={defaultViewport}
@@ -59,7 +59,7 @@ export default function MarketsSection({ data }: MarketsSectionProps) {
               src={data.mapImageSrc}
               alt={data.mapImageAlt}
               fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 64rem"
+              sizes="(max-width: 768px) 100vw,  (max-width: 1536px) 90vw, 1600px"
               className="object-contain"
             />
 

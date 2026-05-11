@@ -46,20 +46,20 @@ export const PRODUCTS_DATA: ProductItem[] = [
     id: "api",
     title: "ACTIVE PHARMACEUTICAL INGREDIENTS",
     subtitle: "INGREDIENTS",
-    imageSrc: "/PNG/Screenshot 2026-05-09 165134.png",
+    imageSrc: "/Homepage/Active pharmaceutical ingredients.png",
     imageAlt: "Active Pharmaceutical Ingredients - powder and capsules",
   },
   {
     id: "intermediates",
     title: "INTERMEDIATES",
-    imageSrc: "/PNG/Screenshot 2026-05-09 172442.png",
+    imageSrc: "/Homepage/intermediates.png",
     imageAlt: "Pharmaceutical Intermediates",
   },
   {
     id: "development",
     title: "PRODUCTS UNDER DEVELOPMENT",
     subtitle: "DEVELOPMENT",
-    imageSrc: "/PNG/Screenshot 2026-05-09 172442.png",
+    imageSrc: "/Homepage/Products under development.png",
     imageAlt: "Products Under Development",
   },
 ];
@@ -71,7 +71,7 @@ export const FEATURES_DATA: FeatureItem[] = [
     description:
       "Research & Development is a part of our evolution, constantly addressing the ever changing market demands and delivering innovative solutions.",
     iconPath: "hexagons-connected",
-    imageSrc: "/PNG/Screenshot 2026-05-09 163536.png",
+    imageSrc: "/Homepage/reasearch and development.png",
   },
   {
     id: "relationships",
@@ -79,7 +79,7 @@ export const FEATURES_DATA: FeatureItem[] = [
     description:
       "Building long term relationships by collaborating with our partners and customers to create solutions that meet their unique needs.",
     iconPath: "hexagons-building",
-    imageSrc: "/PNG/Screenshot 2026-05-09 163536.png",
+    imageSrc: "/Homepage/building relationships.png",
   },
   {
     id: "sops",
@@ -87,7 +87,7 @@ export const FEATURES_DATA: FeatureItem[] = [
     description:
       "Our processes are backed by constant monitoring at every stage of production, guarantee improved processes and excellence in quality.",
     iconPath: "hexagons-sop",
-    imageSrc: "/PNG/Screenshot 2026-05-09 163536.png",
+    imageSrc: "/Homepage/sops and execution.png",
   },
   {
     id: "compliance",
@@ -95,13 +95,13 @@ export const FEATURES_DATA: FeatureItem[] = [
     description:
       "Quality assurance adhering to GMP guidelines set by ICH Q7 ensures that we meet the most stringent regulatory and manufacturing standards.",
     iconPath: "hexagons-compliance",
-    imageSrc: "/PNG/Screenshot 2026-05-09 163536.png",
+    imageSrc: "/Homepage/compliance and quality.png",
   },
 ];
 
 export const QUICK_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "Contact", href: "/contact" },
 ];

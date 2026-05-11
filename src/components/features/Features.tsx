@@ -33,11 +33,11 @@ export default function Features() {
           className="flex flex-col items-center h-full "
         >
           {/* Image */}
-          <div className="mb-6 flex h-[72px] items-center justify-center ">
+          <div className="mb-8 lg:mb-12   flex h-[72px] items-center justify-center ">
             <img
               src={feature.imageSrc}
               alt={feature.title}
-              className="h-auto max-h-[70px] w-auto object-contain"
+              className="h-auto max-h-[100px]  w-auto object-contain"
               loading="lazy"
             />
           </div>

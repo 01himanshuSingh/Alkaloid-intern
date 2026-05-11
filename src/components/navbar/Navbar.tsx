@@ -26,7 +26,7 @@ export default function Navbar() {
   }`}
 >
       <Container>
-        <nav className="flex items-center justify-between h-16 md:h-20">
+        <nav className="flex items-center justify-between h-16 md:h-20  2xl:h-[100px]">
           {/* Logo */}
          <Link href="/" className="flex items-center flex-shrink-0">
   <APLLogo />
@@ -38,7 +38,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-inter text-[13px] font-500 text-gray-700 hover:text-primaryBlue transition-colors duration-200 relative group"
+                  className="font-inter text-[13px] lg:text-[16px] 2xl:text-[20px] font-500 text-gray-700 hover:text-primaryBlue transition-colors duration-200 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primaryBlue transition-all duration-300 group-hover:w-full" />
@@ -89,8 +89,8 @@ function APLLogo() {
       <Image
         src="/PNG/Copy of Alkaloids Logo Files-04.png"
         alt="APL Logo"
-        width={280}
-        height={280}
+        width={300}
+        height={300}
         className="object-contain"
         priority
       />
