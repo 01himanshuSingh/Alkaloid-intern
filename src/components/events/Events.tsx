@@ -45,7 +45,7 @@ export default function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-        <p className="font-montserrat text-[14px] lg:text-[24px] 2xl:text-[30px] font-bold tracking-[2px] uppercase mb-2 text-[#0B67B2]">
+        <p className=" text-sm md:text-base lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase mb-2 text-[#0B67B2]">
   UPCOMING EVENTS & PARTICIPATION
 </p>
           <h2
@@ -109,7 +109,7 @@ function EventCard({ event }: EventCardProps) {
             {event.day}
           </span>
 
-          <span className="font-bold text-sm lg:text-[15px] 2xl:text-[20px] text-[#0B67B2]">
+          <span className=" text-sm lg:text-[15px] 2xl:text-[20px] text-[#0B67B2] font-bold">
             {event.month}
           </span>
         </time>
@@ -124,11 +124,11 @@ function EventCard({ event }: EventCardProps) {
           {event.title}
         </h3>
 
-        <p className="mb-1 font-inter text-[13px] text-mutedText">
+        <p className="mb-1 font-['Libre_Baskerville',serif] text-[13px] text-mutedText">
           {event.time}
         </p>
 
-        <address className="mb-6 not-italic font-inter text-[13px] text-mutedText">
+        <address className="mb-6 not-italic font-['Libre_Baskerville',serif] text-[13px] text-mutedText">
           {event.location}
         </address>
       </div>
@@ -137,7 +137,7 @@ function EventCard({ event }: EventCardProps) {
      <Link
   href={event.href || '#'}
   aria-label={`Register for ${event.title}`}
-  className="group relative inline-block  text-[13px] lg:text-[14px] 2xl:text-[15px] font-semibold uppercase tracking-[2px] text-[#0B67B2]"
+  className="group relative inline-block  text-[13px] lg:text-[14px] 2xl:text-[15px] font-semibold uppercase tracking-[1px] text-[#0B67B2]"
 >
   REGISTER NOW
 

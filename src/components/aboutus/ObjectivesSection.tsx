@@ -15,7 +15,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
   return (
     <section
       aria-labelledby="objectives-heading"
-      className="bg-white py-16 md:py-20 lg:py-28"
+      className="bg-white py-16 md:py-20 lg:py-18"
     >
       <div className="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -33,7 +33,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 as="h2"
                 id="objectives-heading"
                 variant="olive"
-                className="text-lg md:text-xl leading-tight"
+                className="text-sm md:text-base lg:text-[28px] 2xl:text-[35px] leading-relaxed"
               >
                 OBJECTIVES
                 <br />
@@ -46,7 +46,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 <motion.p
                   key={obj.id}
                   variants={fadeUpVariants}
-                  className="font-['Libre_Baskerville',serif] text-gray-700 text-sm md:text-[0.9rem] leading-loose"
+                  className="font-['Libre_Baskerville',serif] text-sm md:text-[0.9rem] lg:text-[15px] 2xl:text-[17px]  leading-loose"
                 >
                   {obj.paragraph}
                 </motion.p>

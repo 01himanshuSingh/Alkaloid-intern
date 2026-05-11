@@ -32,14 +32,14 @@ export default function MarketsSection({ data }: MarketsSectionProps) {
           <motion.h2
             id="markets-heading"
             variants={fadeUpVariants}
-            className="font-['Geologica',sans-serif] font-bold tracking-[0.18em] uppercase text-white text-2xl md:text-3xl lg:text-4xl mb-4"
+            className="font-['Geologica',sans-serif] font-bold tracking-[0.18em] uppercase text-white text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl mb-4"
           >
             {data.heading}
           </motion.h2>
 
           <motion.p
             variants={fadeUpVariants}
-            className="font-['Libre_Baskerville',serif] text-white/90 text-sm md:text-base leading-relaxed max-w-md mx-auto"
+            className="font-['Libre_Baskerville',serif] text-white/90 text-sm md:text-[0.9rem] lg:text-[15px] 2xl:text-[17px] leading-relaxed max-w-md mx-auto"
           >
             {data.subtitle}
           </motion.p>

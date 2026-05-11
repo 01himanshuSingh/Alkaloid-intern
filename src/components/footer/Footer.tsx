@@ -15,7 +15,7 @@ export default function Footer() {
 
           {/* Our Office */}
           <div>
-            <h4 className="font-montserrat font-700 text-white text-[12px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR OFFICE
             </h4>
             <address className="not-italic font-inter text-white/70 text-[12px] leading-[1.9]">
@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Our Factory */}
           <div>
-            <h4 className="font-montserrat font-700 text-white text-[12px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR FACTORY
             </h4>
             <address className="not-italic font-inter text-white/70 text-[12px] leading-[1.9]">
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-montserrat font-700 text-white text-[12px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               QUICK LINKS
             </h4>
             <nav>
