@@ -54,7 +54,7 @@ export const PRODUCTS_DATA: ProductItem[] = [
     id: "development",
     title: "PRODUCTS UNDER DEVELOPMENT",
     subtitle: "DEVELOPMENT",
-    imageSrc: "/Homepage/Products under development.png",
+    imageSrc: "/Homepage/products under development.png",
     imageAlt: "Products Under Development",
   },
 ];

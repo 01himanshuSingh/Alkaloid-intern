@@ -22,7 +22,7 @@ export const productPageData: ProductPageData = {
     {
       id: "pelargonium",
       hexagonImage:
-        "/Product page/Individual Product/PELARGONIUM SIDIODES/cover.png",
+        "/Product page/Individual Product/PELARGONIUM SIDIODES/Cover.png",
       imageAlt: "Pelargonium sidiodes plant",
       products: [
         {
@@ -38,7 +38,7 @@ export const productPageData: ProductPageData = {
     {
       id: "oxybuprocaine",
       hexagonImage:
-        "/Product page/Individual Product/PELARGONIUM SIDIODES/cover.png",
+        "/Product page/Individual Product/PELARGONIUM SIDIODES/Cover.png",
       imageAlt: "Oxybuprocaine botanical source",
       products: [
         {
@@ -94,7 +94,7 @@ export const productPageData: ProductPageData = {
       id: "myrrh",
       name: "Myrrh Tincture",
       slug: "myrrh-tincture",
-      hexagonImage: "/Product page/Individual Product/MYRRH TINCTURE/cover.png",
+      hexagonImage: "/Product page/Individual Product/MYRRH TINCTURE/Cover.png",
       imageAlt: "Myrrh resin tincture",
     },
   ],
