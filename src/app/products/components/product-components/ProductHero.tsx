@@ -32,21 +32,7 @@ export default function ProductHero({ heroImage }: ProductHeroProps) {
       </motion.div>
 
       <header className="relative z-10 flex flex-col items-center justify-center h-full px-4">
-        <motion.div
-          variants={fadeInVariants}
-          initial="hidden"
-          animate="visible"
-          className="absolute top-5 left-5 md:top-7 md:left-8"
-        >
-          <Image
-            src="/images/logo.png"
-            alt="Alkaloids Private Limited"
-            width={130}
-            height={52}
-            priority
-            className="object-contain"
-          />
-        </motion.div>
+       
 
         <motion.h1
           variants={fadeUpVariants}

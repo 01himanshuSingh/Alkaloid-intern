@@ -3,7 +3,7 @@ import { ProductPageData } from "../types/product";
 export const productPageData: ProductPageData = {
   slug: "hyoscine-ph-eur",
   heroImage:
-    "/Product page/Individual Product/Image May 12, 2026, 01_36_03 PM.png",
+    "/Product page/Individual Product/Copy of cover (1).jpg",
   categories: [
     {
       id: "anticholinergics",

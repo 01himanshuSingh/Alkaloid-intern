@@ -4,6 +4,7 @@ import { JourneyIntro } from "./components/history/JourneyIntro";
 import { StatisticsSection } from "./components/history/StatisticsSection";
 import { MilestoneBanner } from "./components/history/MilestoneBanner";
 import { historyPageData } from "./data/history";
+import { Pharmaceutical } from "./components/history/Pharmaceutical";
 export const metadata: Metadata = {
   title: "Our History | APL Alkaloids Private Limited",
   description:
@@ -23,6 +24,7 @@ export default function HistoryPage() {
     <main aria-label="Company history page">
       <HistoryHero data={hero} />
       <JourneyIntro data={journeyIntro} />
+      <Pharmaceutical/>
       <StatisticsSection items={statistics} />
       <MilestoneBanner data={milestoneBanner} />
     </main>

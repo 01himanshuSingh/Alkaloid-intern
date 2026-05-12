@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { generateProductMetadata } from "./components/lib/product-utils";
+
 import { productPageData } from "./components/data/products";
 import ProductHero from "./components/product-components/ProductHero";
 import ProductCategorySection from "./components/product-components/ProductCategorySection";

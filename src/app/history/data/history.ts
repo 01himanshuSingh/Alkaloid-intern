@@ -3,7 +3,7 @@ import { HistoryPageData } from "../types/history";
 export const historyPageData: HistoryPageData = {
   hero: {
     heading: "From Indian origins to\nglobal impact.",
-    imageSrc: "/History page/ChatGPT Image May 11, 2026, 05_58_14 PM 1.png",
+    imageSrc: "/History page/Copy of cover.jpg",
     imageAlt: "APL Alkaloids team in a boardroom meeting",
     logoSrc: "/images/logo-white.svg",
     logoAlt: "APL Alkaloids Private Limited",
