@@ -15,7 +15,7 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
   return (
     <section
       aria-labelledby="milestone-heading"
-      className="relative  w-full overflow-hidden min-h-[50vh] lg:min-h-[65vh] xl:min-h-[70vh] "
+     className="relative w-full overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[620px] lg:min-h-[720px] 2xl:min-h-[860px]"
 
     >
       <motion.div
@@ -36,7 +36,7 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
             alt={data.imageAlt}
             fill
             sizes="100vw"
-            className="object-cover object-center"
+          className="object-cover object-center scale-[1.02] transition-transform duration-[2200ms] ease-out motion-safe:group-hover:scale-[1.05]"
             quality={85}
           />
         </motion.div>
@@ -60,11 +60,11 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
         viewport={viewportConfig}
         className="relative z-10 flex items-end h-full min-h-[440px] px-8 py-12 sm:px-12 sm:py-14 md:px-16 md:py-16"
       >
-        <motion.blockquote variants={fadeUpVariants} className="max-w-lg md:max-w-xl lg:max-w-md 2xl:max-w-lg">
+        <motion.blockquote variants={fadeUpVariants} className="max-w-lg md:max-w-xl lg:max-w-sm 2xl:max-w-lg">
           <p
             id="milestone-heading"
-            className="font-geologica text-white font-light leading-snug"
-            style={{ fontSize: "clamp(1rem, 2.8vw, 1.4rem)" }}
+            className="font-geologica text-white font-light leading-snug text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] 2xl:text-[32px]"
+            
           >
             {data.text}
           </p>

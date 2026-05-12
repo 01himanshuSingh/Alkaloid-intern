@@ -4,11 +4,6 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
-  { label: "Manufacturing", href: "/manufacturing" },
-  { label: "R&D", href: "/research" },
-  { label: "Certifications", href: "/certifications" },
-  { label: "Events", href: "/events" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const EVENTS_DATA: EventItem[] = [

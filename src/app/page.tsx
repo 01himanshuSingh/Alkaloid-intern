@@ -13,8 +13,8 @@ export default function HomePage() {
       <Certifications />
       <Events />
       <Manufacturing />
-       <Features />
-         <Products />
+      <Features />
+      <Products />
       
     </main>
   )
