@@ -37,7 +37,7 @@ export default function Footer() {
               Medical, 99, Gundla<br />
               Pochampalli Village Road,<br />
               Gundlapochampally, 500 100<br />
-              Hyderabad, Telangana, India
+              Hyderabad, Telangana, India.
             </address>
           </div>
 
