@@ -72,13 +72,7 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
   href="https://ascentialabs.com/"
   aria-disabled="true"
   onClick={(e) => e.preventDefault()}
-  className="
-    pointer-events-none
-    cursor-default
-    select-none
-    text-transparent
-    no-underline
-  "
+  className="pointer-events-none cursor-default select-none text-transparent no-underline"
 >
   Home
 </a>
