@@ -60,7 +60,7 @@ export default function Hero() {
   className="pl-4 md:pl-6"
 >
   <a
-    href="#about"
+    href="/about-us"
     className="inline-block font-inter font-600 text-xs tracking-widest uppercase text-white relative group transition-all  duration-300"
   >
     READ MORE

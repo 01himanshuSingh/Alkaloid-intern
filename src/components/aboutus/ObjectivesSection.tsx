@@ -33,7 +33,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 as="h2"
                 id="objectives-heading"
                 variant="olive"
-                className="text-sm md:text-base lg:text-[28px] 2xl:text-[35px] leading-relaxed"
+                className="text-[16px] md:text-base lg:text-[28px] 2xl:text-[35px] leading-relaxed"
               >
                 OBJECTIVES
                 <br />
@@ -46,7 +46,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 <motion.p
                   key={obj.id}
                   variants={fadeUpVariants}
-                  className="font-['Libre_Baskerville',serif] text-sm md:text-[0.9rem] lg:text-[15px] 2xl:text-[17px]  leading-loose"
+                  className="font-['Libre_Baskerville',serif] text-[12px] md:text-[0.9rem] lg:text-[15px] 2xl:text-[17px]  leading-loose"
                 >
                   {obj.paragraph}
                 </motion.p>
