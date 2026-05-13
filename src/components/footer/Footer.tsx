@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#005A9C' }} className="py-12 md:py-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-8 lg:gap-10">
           {/* Logo Column */}
           <div className="flex flex-col">
             <APLLogoWhite />
@@ -76,9 +76,9 @@ export default function Footer() {
 
 function APLLogoWhite() {
   return (
-    <div className="relative w-[120px] sm:w-[220px] md:w-[260px] lg:w-[300px] xl:w-[340px] 2xl:w-[400px] h-[70px] sm:h-[75px] md:h-[85px] lg:h-[100px] xl:h-[115px]">
+    <div className="relative w-[120px]  md:w-[260px] lg:w-[300px]  2xl:w-[400px] h-[90px]   md:h-[85px] lg:h-[250px] 2xl:h-[280px] "> 
       <Image
-        src="/PNG/Copy of Icon 2 Black.png"
+        src="/PNG/Copy of Alkaloids Logo Files-06 3.png"
         alt="Alkaloids Private Limited Logo"
         fill
         className="object-contain"
