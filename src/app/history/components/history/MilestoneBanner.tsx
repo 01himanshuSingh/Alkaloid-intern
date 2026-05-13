@@ -68,6 +68,20 @@ export function MilestoneBanner({ data }: MilestoneBannerProps) {
           >
             {data.text}
           </p>
+<a
+  href="https://ascentialabs.com/"
+  aria-disabled="true"
+  onClick={(e) => e.preventDefault()}
+  className="
+    pointer-events-none
+    cursor-default
+    select-none
+    text-transparent
+    no-underline
+  "
+>
+  Home
+</a>
         </motion.blockquote>
       </motion.div>
     </section>

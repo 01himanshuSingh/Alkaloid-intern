@@ -12,6 +12,86 @@ import ProductGrid2 from "./components/product-components/ProductGrid2";
 
 // export const metadata: Metadata = generateProductMetadata(productPageData);
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Our Products | Alkaloids Pvt Ltd",
+
+  description:
+    "Explore Alkaloids Pvt Ltd pharmaceutical products including high-quality APIs, healthcare formulations, active pharmaceutical ingredients, and innovative pharmaceutical manufacturing solutions.",
+
+  keywords: [
+    "Alkaloids products",
+    "pharmaceutical products India",
+    "API products",
+    "active pharmaceutical ingredients",
+    "bulk drugs India",
+    "pharmaceutical formulations",
+    "healthcare products",
+    "drug manufacturing",
+    "pharma product company",
+    "global pharmaceutical products",
+    "high quality APIs",
+    "pharmaceutical ingredients",
+    "life sciences products",
+    "Indian pharma exports",
+    "medical formulations",
+    "pharmaceutical solutions",
+    "research based pharma products",
+    "pharmaceutical innovation",
+    "healthcare manufacturing",
+    "trusted pharmaceutical company"
+  ],
+
+  metadataBase: new URL("https://alkaloids.in"),
+
+  alternates: {
+    canonical: "/products",
+  },
+
+  openGraph: {
+    title:
+      "Our Products | Alkaloids Pvt Ltd",
+
+    description:
+      "Discover Alkaloids Pvt Ltd pharmaceutical products, APIs, healthcare solutions, and innovative pharmaceutical manufacturing excellence.",
+
+    url: "https://alkaloids.in/products",
+
+    siteName: "Alkaloids Pvt Ltd",
+
+    images: [
+      {
+        url: "https://alkaloids.in/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Alkaloids Pvt Ltd Products",
+      },
+    ],
+
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "Our Products | Alkaloids Pvt Ltd",
+
+    description:
+      "Explore pharmaceutical products, APIs, and healthcare manufacturing solutions from Alkaloids Pvt Ltd.",
+
+    images: ["https://alkaloids.in/og-image.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function ProductsPage() {
   const { categories, gridProducts, feature, similarProducts, otherProducts, heroImage } =
     productPageData;
