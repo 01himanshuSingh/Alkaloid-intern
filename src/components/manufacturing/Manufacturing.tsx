@@ -33,7 +33,7 @@ export default function Manufacturing() {
   <h2
     className="font-montserrat font-500 leading-tight mb-8"
     style={{
-      fontSize: 'clamp(32px, 4vw, 48px)',
+      fontSize: 'clamp(23px, 4vw, 48px)',
       letterSpacing: '-1px',
       color: '#88A933',
       fontWeight: 500,
@@ -44,15 +44,15 @@ export default function Manufacturing() {
     AND SOURCING
   </h2>
 
-  <div className="pl-4 md:pl-6">
-    <p className="text-gray-700 font-800 text-[15px] lg:text-[15px] 2xl:text-[17px]  font-body leading-[1.85] mb-6">
+  <div >
+    <p className="text-gray-700 font-800 text-[14px] lg:text-[15px] 2xl:text-[17px]  font-body leading-[1.85] mb-6">
       For over three decades, our manufacturing facility has been operating in full compliance
       with ICH cGMP guidelines and other regulatory standards. Engineered for precision, it has
       dedicated blocks for extraction, isolation, reaction, purification and finalisation, all
       within a clean pharma environment.
     </p>
 
-    <p className="text-gray-700 font-body font-600 text-[15px] lg:text-[15px] 2xl:text-[17px] leading-[1.85] mb-8">
+    <p className="text-gray-700 font-body font-600 text-[14px] lg:text-[15px] 2xl:text-[17px] leading-[1.85] mb-8">
       Our supply chain starts at the source, with raw materials procured from our own farms and
       through trusted partnerships, ensuring consistency, reliability and uncompromised quality.
     </p>

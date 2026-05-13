@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Our Factory */}
           <div>
-            <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-white text-[15px] md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR FACTORY
             </h4>
             <address className="not-italic font-[Libre_Baskerville] text-white/70 text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
@@ -76,13 +76,12 @@ export default function Footer() {
 
 function APLLogoWhite() {
   return (
-    <div className="flex items-center">
+    <div className="relative w-[120px] sm:w-[220px] md:w-[260px] lg:w-[300px] xl:w-[340px] 2xl:w-[400px] h-[70px] sm:h-[75px] md:h-[85px] lg:h-[100px] xl:h-[115px]">
       <Image
-        src="/PNG/Copy of Alkaloids Logo Files-06.png"
+        src="/PNG/Copy of Icon 2 Black.png"
         alt="Alkaloids Private Limited Logo"
-        width={380}
-        height={360}
-        className="h-auto w-auto object-contain"
+        fill
+        className="object-contain"
         priority
       />
     </div>

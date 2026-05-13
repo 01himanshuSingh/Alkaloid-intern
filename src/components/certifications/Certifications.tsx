@@ -60,7 +60,7 @@ export default function Certifications() {
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   transition={{ duration: 0.5, delay: idx * 0.1 }}
- className="w-[140px] h-[80px] 2xl:w-[190px] 2xl:h-[130px]  flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300"
+ className="w-[150px] h-[90px] lg:w-[140px] lg:h-[80px] 2xl:w-[190px] 2xl:h-[130px] flex items-center justify-center opacity-100 lg:grayscale lg:opacity-70 lg:hover:grayscale-0 lg:hover:opacity-100 transition-all duration-300 mx-auto"
 >
   <Image
     src={cert.imageSrc}

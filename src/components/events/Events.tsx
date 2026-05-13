@@ -34,7 +34,7 @@ export default function Events() {
   return (
     <section
       aria-labelledby="events-heading"
-      className="bg-white py-16 md:py-20"
+      className="bg-white py-10 md:py-20 lg:py-21"
     >
       <Container>
         {/* Section Header */}
@@ -45,7 +45,7 @@ export default function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-        <p className=" text-sm md:text-base lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase mb-2 text-[#0B67B2]">
+        <p className=" text-[15px] md:text-base lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase mb-2 text-[#0B67B2]">
   UPCOMING EVENTS & PARTICIPATION
 </p>
           <h2
@@ -55,7 +55,7 @@ export default function Events() {
             Upcoming Events and Participation
           </h2>
 
-          <div className="w-12 h-0.5 bg-primaryBlue mx-auto mt-3" />
+          <div className="w-12 h-0.5 bg-primaryBlue mx-auto mt-2 lg:mt-3" />
         </motion.header>
 
         {/* Events Grid */}
@@ -100,7 +100,7 @@ function EventCard({ event }: EventCardProps) {
           className="block"
         >
           <span
-            className="block text-[#0B67B2] font-500 leading-none text-[28px] lg:text-[35px] 2xl:text-[42px]"
+            className="block text-[#0B67B2] font-500 leading-none text-[24px] lg:text-[35px] 2xl:text-[42px]"
             style={{
               
               fontWeight: 500,
@@ -109,7 +109,7 @@ function EventCard({ event }: EventCardProps) {
             {event.day}
           </span>
 
-          <span className=" text-sm lg:text-[15px] 2xl:text-[20px] text-[#0B67B2] font-bold">
+          <span className=" text-[16] lg:text-[15px] 2xl:text-[20px] text-[#0B67B2] font-bold">
             {event.month}
           </span>
         </time>
@@ -124,7 +124,7 @@ function EventCard({ event }: EventCardProps) {
           {event.title}
         </h3>
 
-        <p className="mb-1 font-['Libre_Baskerville',serif] text-[13px] text-mutedText">
+        <p className="mb-1 font-['Libre_Baskerville',serif] text-[13px]  text-mutedText">
           {event.time}
         </p>
 

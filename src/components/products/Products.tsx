@@ -31,7 +31,7 @@ export default function Products() {
           className="text-center mb-12"
         >
           <h2
-            className="text-sm md:text-base lg:text-[28px] 2xl:text-[35px] font-semibold  text-white tracking-widest"
+            className="text-[18px] md:text-base lg:text-[28px] 2xl:text-[35px] font-semibold  text-white tracking-widest"
             style={{  letterSpacing: '1px' }}
           >
             OUR PRODUCTS
@@ -92,11 +92,11 @@ function ProductCard({ product }: { product: ProductItem }) {
 
         {/* Arrow */}
         <div
-          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full hover:cursor-pointer hover:bg-[#0B67B2] backdrop-blur-sm transition-all duration-300 group-hover:bg-primaryBlue"
+          className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full hover:cursor-pointer hover:bg-[#0B67B2] text-[#0B67B2] hover:text-white backdrop-blur-sm transition-all duration-300 group-hover:bg-primaryBlue"
         >
           <ChevronRight
             size={15}
-            className="text-[#0B67B2] hover:text-white"
+            className=""
           />
         </div>
       </div>
