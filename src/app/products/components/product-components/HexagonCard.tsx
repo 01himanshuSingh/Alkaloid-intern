@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { GridProduct } from "../types/product";
 import { fadeUpVariants } from "@/constant/animations";
 import HexagonImage from "../shared/HexagonImage";
-import ArrowCircleIcon from "../shared/ArrowCircleIcon";
+import { HexagonButton } from "../shared/ArrowCircleIcon";
 
 interface HexagonCardProps {
   product: GridProduct;
@@ -35,12 +35,12 @@ export default function HexagonCard({ product }: HexagonCardProps) {
   </motion.div>
 
   <h3
-    className="font-['Geologica'] text-sm md:text-base lg:text-[19px] 2xl:text-[28px] font-semibold uppercase tracking-widest text-[#374151] leading-snug max-w-[160px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[290px] 2xl:max-w-[300px] text-center group-hover:text-[#0B67B2] transition-colors"
+    className="font-['Geologica'] text-[14px] md:text-base lg:text-[19px] 2xl:text-[28px] font-semibold uppercase tracking-widest text-[#374151] leading-snug max-w-[160px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[290px] 2xl:max-w-[300px] text-center group-hover:text-[#0B67B2] transition-colors"
   >
     {product.name}
   </h3>
 
-  <ArrowCircleIcon
+  <HexagonButton
     size={24}
     className="text-[#0B67B2] group-hover:scale-110 transition-transform duration-200"/>
 </div>

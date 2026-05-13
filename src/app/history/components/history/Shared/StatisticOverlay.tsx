@@ -35,7 +35,7 @@ export function StatisticOverlay({
       <motion.span
         variants={statNumberVariants}
         className="font-geologica text-white font-light leading-none select-none"
-        style={{ fontSize: "clamp(5rem, 12vw, 9rem)" }}
+        style={{ fontSize: "clamp(4rem, 12vw, 9rem)" }}
       >
         {value}
       </motion.span>
@@ -47,7 +47,7 @@ export function StatisticOverlay({
       >
         <span
           className="font-geologica text-white font-light leading-tight"
-          style={{ fontSize: "clamp(1.4rem, 3vw, 2.4rem)" }}
+          style={{ fontSize: "clamp(1.3rem, 3vw, 2.4rem)" }}
         >
           {label}
         </span>

@@ -18,9 +18,9 @@ export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <section
       aria-label="Product Grid"
-      className="w-full bg-white py-14 md:py-20 lg:py-10"
+      className="w-full bg-white py-8 md:py-20 lg:py-7"
     >
-      <div className="max-w-6xl mx-auto px-6 md:px-10 space-y-16">
+      <div className="max-w-6xl mx-auto px-6 md:px-10 space-y-10">
         {rows.map((row, rowIdx) => (
           <motion.div
             key={rowIdx}

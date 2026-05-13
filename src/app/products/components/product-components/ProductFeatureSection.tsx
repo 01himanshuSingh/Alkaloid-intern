@@ -13,10 +13,10 @@ interface ProductFeatureSectionProps {
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="space-y-0.5">
-      <p className="font-['Geologica'] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] uppercase tracking-widest text-[#6B7280] font-bold">
+      <p className="font-['Geologica'] text-[14px] md:text-base lg:text-[15px] 2xl:text-[20px] uppercase tracking-widest text-[#6B7280] font-semibold">
         {label}
       </p>
-      <p className="font-['Libre_Baskerville'] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] text-[#374151] leading-relaxed">
+      <p className="font-['Libre_Baskerville'] text-[13px] md:text-base lg:text-[13px] 2xl:text-[15px] text-[#374151] leading-relaxed">
         {value}
       </p>
     </div>
@@ -43,7 +43,7 @@ export default function ProductFeatureSection({ feature }: ProductFeatureSection
             viewport={VIEWPORT_ONCE}
             className="flex-1 min-w-0 space-y-8"
           >
-            <h2 className="font-['Geologica'] text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-semibold text-[#0B67B2] leading-tight">
+            <h2 className="font-['Geologica'] text-[20px] md:text-5xl lg:text-5xl 2xl:text-6xl font-semibold text-[#0B67B2] leading-tight">
               {feature.title}
             </h2>
 
@@ -58,14 +58,14 @@ export default function ProductFeatureSection({ feature }: ProductFeatureSection
 
                
               <motion.div variants={fadeUpVariants} className="space-y-2">
-                <p className="font-['Geologica'] text-[10px] text-sm md:text-base lg:text-[18px] 2xl:text-[24px] uppercase tracking-widest text-[#6B7280] font-bold">
+                <p className="font-['Geologica'] text-[14px] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] uppercase tracking-widest text-[#6B7280] font-bold">
                   Synonyms
                 </p>
                 <ul role="list" className="space-y-0.5">
                   {feature.synonyms.map((syn: string) => (
                     <li
                       key={syn}
-                      className="font-['Libre_Baskerville'] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] text-[#374151]"
+                      className="font-['Libre_Baskerville'] text-[12px] md:text-base lg:text-[14px] 2xl:text-[18px] text-[#374151]"
                     >
                       {syn}
                     </li>
@@ -84,7 +84,7 @@ export default function ProductFeatureSection({ feature }: ProductFeatureSection
  </div>
 
               <motion.div variants={fadeUpVariants} className="space-y-3">
-                <p className="font-['Geologica']  text-sm md:text-base lg:text-[18px] 2xl:text-[24px] uppercase tracking-widest text-[#6B7280] font-bold">
+                <p className="font-['Geologica']  text-[14px] md:text-base lg:text-[16px] 2xl:text-[20px] uppercase tracking-widest text-[#6B7280] font-bold">
                   Certificates Available
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
@@ -92,7 +92,7 @@ export default function ProductFeatureSection({ feature }: ProductFeatureSection
                     {certsLeft.map((cert: any) => (
                       <li
                         key={cert.name}
-                        className="font-['Libre_Baskerville'] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] text-[#374151]"
+                        className="font-['Libre_Baskerville'] text-[12px] md:text-base lg:text-[14px] 2xl:text-[18px] text-[#374151]"
                       >
                         {cert.name}
                       </li>
@@ -102,7 +102,7 @@ export default function ProductFeatureSection({ feature }: ProductFeatureSection
                     {certsRight.map((cert: any) => (
                       <li
                         key={cert.name}
-                        className="font-['Libre_Baskerville'] text-sm md:text-base lg:text-[16px] 2xl:text-[20px] text-[#374151]"
+                        className="font-['Libre_Baskerville'] text-sm md:text-base lg:text-[14px] 2xl:text-[18px] text-[#374151]"
                       >
                         {cert.name}
                       </li>

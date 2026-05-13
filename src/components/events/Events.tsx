@@ -45,7 +45,7 @@ export default function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-        <p className=" text-[15px] md:text-base lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase mb-2 text-[#0B67B2]">
+        <p className=" text-[15px] md:text-base lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase  text-[#0B67B2]">
   UPCOMING EVENTS & PARTICIPATION
 </p>
           <h2
@@ -55,7 +55,7 @@ export default function Events() {
             Upcoming Events and Participation
           </h2>
 
-          <div className="w-12 h-0.5 bg-primaryBlue mx-auto mt-2 lg:mt-3" />
+          <div className="w-12 h-0.5 bg-primaryBlue mx-auto mt-1 lg:mt-3" />
         </motion.header>
 
         {/* Events Grid */}
@@ -100,7 +100,7 @@ function EventCard({ event }: EventCardProps) {
           className="block"
         >
           <span
-            className="block text-[#0B67B2] font-500 leading-none text-[24px] lg:text-[35px] 2xl:text-[42px]"
+            className="block text-[#0B67B2] font-500 leading-none text-[20px] lg:text-[35px] 2xl:text-[42px]"
             style={{
               
               fontWeight: 500,
@@ -116,19 +116,19 @@ function EventCard({ event }: EventCardProps) {
       </header>
 
       {/* Divider */}
-      <div className="mb-5 h-px w-full bg-primaryBlue/20" />
+      <div className="mb-3 lg:mb-5 h-px w-full bg-primaryBlue/20" />
 
       {/* Event Content */}
       <div>
-        <h3 className="mb-2 font-montserrat text-[17px] lg:text-[20px] 2xl:text-[24px] font-700 text-[#0B67B2]">
+        <h3 className="mb-2 font-montserrat text-[15px] lg:text-[20px] 2xl:text-[24px] font-700 text-[#0B67B2]">
           {event.title}
         </h3>
 
-        <p className="mb-1 font-['Libre_Baskerville',serif] text-[13px]  text-mutedText">
+        <p className="mb-1 font-['Libre_Baskerville',serif] text-[12px]  text-mutedText">
           {event.time}
         </p>
 
-        <address className="mb-6 not-italic font-['Libre_Baskerville',serif] text-[13px] text-mutedText">
+        <address className="mb-6 not-italic font-['Libre_Baskerville',serif] text-[12px] text-mutedText">
           {event.location}
         </address>
       </div>
@@ -137,7 +137,7 @@ function EventCard({ event }: EventCardProps) {
      <Link
   href={event.href || '#'}
   aria-label={`Register for ${event.title}`}
-  className="group relative inline-block  text-[13px] lg:text-[14px] 2xl:text-[15px] font-semibold uppercase tracking-[1px] text-[#0B67B2]"
+  className="group relative inline-block  text-[12px] lg:text-[14px] 2xl:text-[15px] font-semibold uppercase tracking-[1px] text-[#0B67B2]"
 >
   REGISTER NOW
 

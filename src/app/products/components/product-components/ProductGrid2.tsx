@@ -19,7 +19,7 @@ export default function ProductGrid2({ products }: ProductGridProps) {
   return (
     <section
       aria-label="Product Grid"
-      className="w-full bg-white py-14 md:py-20 lg:py-10"
+      className="w-full bg-white py-8 md:py-20 lg:py-5"
     >
       <div className="max-w-6xl lg:max-w-6xl  2xl:max-w-7xl mx-auto px-6 md:px-10 space-y-16">
         {rows.map((row, rowIdx) => (

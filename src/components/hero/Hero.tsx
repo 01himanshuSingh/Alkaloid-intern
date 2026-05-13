@@ -50,7 +50,7 @@ export default function Hero() {
             >
               Specialising in Phyto-based APIs and Standard and Botanical
               Extract as APIs with a focus on Priority and Niche molecules,
-              and Semi-Synthetic Alkaloids.
+              and Semi-Synthetic .
             </motion.p>
 
          <motion.div

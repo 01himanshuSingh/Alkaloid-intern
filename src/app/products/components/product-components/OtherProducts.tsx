@@ -19,7 +19,7 @@ export default function OtherProducts({ products }: OtherProductsProps) {
       viewport={VIEWPORT_ONCE}
       aria-label="Other Products"
     >
-      <h2 className="font-['Geologica'] text-sm md:text-base lg:text-[20px] 2xl:text-[30px]  uppercase tracking-widest font-bold text-[#374151] mb-5">
+      <h2 className="font-['Geologica'] text-[14px] md:text-base lg:text-[20px] 2xl:text-[30px]  uppercase tracking-widest font-bold text-[#374151] mb-5">
         Other Products
       </h2>
       <ProductList items={products} />

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { cn } from "../lib/product-utils";
 import { slideLeftVariants, staggerContainerVariants, VIEWPORT_ONCE, fadeUpVariants } from "../constant/animations";
 import HexagonImage from "../shared/HexagonImage";
-import ArrowCircleIcon from "../shared/ArrowCircleIcon";
 import { ProductCategory } from "../types/product";
+import { HexagonButton } from "../shared/ArrowCircleIcon";
 
 
 interface ProductCategorySectionProps {
@@ -21,7 +21,7 @@ export default function ProductCategorySection({
   return (
     <section
       aria-label={`Product category ${category.id}`}
-      className="w-full py-14 md:py-20 lg:py-8 2xl:py-15 last:border-0"
+      className="w-full py-10 md:py-20 lg:py-8 2xl:py-15 last:border-0"
     >
       <div
         className={cn(
@@ -35,10 +35,10 @@ export default function ProductCategorySection({
   initial="hidden"
   whileInView="visible"
   viewport={VIEWPORT_ONCE}
-  className="flex-shrink-0 flex justify-center w-full max-w-[190px] sm:max-w-[220px] md:max-w-[240px] lg:max-w-[380px] 2xl:max-w-[420px]"
+  className="flex-shrink-0 flex justify-center w-full max-w-[190px] sm:max-w-[220px] md:max-w-[240px] lg:max-w-[320px] 2xl:max-w-[420px]"
 >
   <HexagonImage
-    src={category.hexagonImage}
+    src={category.hexagonImage} 
     alt={category.imageAlt}
     width={340}
     height={340}
@@ -61,13 +61,13 @@ export default function ProductCategorySection({
               <motion.li key={product.slug} variants={fadeUpVariants}>
               <p
   className="group flex items-start gap-3 py-3 border-b border-gray-100 last:border-0 transition-colors">
-  <ArrowCircleIcon
+  <HexagonButton
     size={22}
     className="mt-0.5 shrink-0 text-[#0B67B2] group-hover:scale-110 transition-transform duration-200"
   />
 
   <span
-    className="font-['Geologica'] text-sm md:text-base lg:text-[22px] 2xl:text-[32px] font-medium tracking-wider text-[#0B67B2] uppercase group-hover:text-[#88A933] transition-colors leading-snug">
+    className="font-['Geologica'] text-[14px] md:text-base lg:text-[22px] 2xl:text-[32px] font-medium tracking-wider text-[#0B67B2] uppercase group-hover:text-[#88A933] transition-colors leading-snug">
     {product.name}
   </span>
 </p>

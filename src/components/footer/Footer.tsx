@@ -18,9 +18,9 @@ export default function Footer() {
             <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR OFFICE
             </h4>
-            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
+            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-[12px] md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
               Alkaloids Private Limited, 706,<br />
-              Geeva Fountainhead, H.UDA<br />
+              Gowra Fountainhead, HUDA<br />
               Techno Enclave, Madhapur,<br />
               500 081 Hyderabad,<br />
               Telangana, India
@@ -32,18 +32,18 @@ export default function Footer() {
             <h4 className="font-montserrat font-700 text-white text-[15px] md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR FACTORY
             </h4>
-            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
-              Survey No 25/3, Shop No 3,<br />
-              Medical, 99, Gandhi<br />
-              Pochampudi Village Road,<br />
-              Gandallaposchampally, 500110<br />
+            <address className="not-italic font-[Libre_Baskerville] text-white/70 text-[12px] md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] leading-[1.9]">
+              Survey No 25/3, Shop No 5,<br />
+              Medical, 99, Gundla<br />
+              Pochampalli Village Road,<br />
+              Gundlapochampally, 500 100<br />
               Hyderabad, Telangana, India
             </address>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-montserrat font-700 text-[#88A933] text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-[#88A933] text-[14px] md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               QUICK LINKS
             </h4>
             <nav>
@@ -52,7 +52,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="font-[Libre_Baskerville] text-[#88A933] text-sm md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] hover:text-white transition-colors duration-200"
+                      className="font-[Libre_Baskerville] text-[#88A933] text-[13px] md:text-[0.9rem] lg:text-[13px] 2xl:text-[15px] hover:text-white transition-colors duration-200"
                     >
                       {link.label}
                     </Link>

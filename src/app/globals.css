@@ -133,3 +133,79 @@
 .font-body {
   font-family: var(--font-baskerville), serif;
 }
+
+/* ── Base transition ── */
+.ls-base {
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* ── Hidden states ── */
+.ls-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.ls-fade-down {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+.ls-fade-left {
+  opacity: 0;
+  transform: translateX(40px);
+}
+.ls-fade-right {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.ls-fade {
+  opacity: 0;
+}
+.ls-zoom-in {
+  opacity: 0;
+  transform: scale(0.85);
+}
+.ls-zoom-out {
+  opacity: 0;
+  transform: scale(1.15);
+}
+
+/* ── Visible state (applied by LazySection when element enters view) ── */
+.ls-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ── Stagger helpers ── */
+.ls-delay-1 {
+  transition-delay: 100ms;
+}
+.ls-delay-2 {
+  transition-delay: 200ms;
+}
+.ls-delay-3 {
+  transition-delay: 300ms;
+}
+.ls-delay-4 {
+  transition-delay: 400ms;
+}
+.ls-delay-5 {
+  transition-delay: 500ms;
+}
+
+/* ── Respect reduced-motion: never animate ── */
+@media (prefers-reduced-motion: reduce) {
+  .ls-base,
+  .ls-fade-up,
+  .ls-fade-down,
+  .ls-fade-left,
+  .ls-fade-right,
+  .ls-fade,
+  .ls-zoom-in,
+  .ls-zoom-out {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

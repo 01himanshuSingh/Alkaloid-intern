@@ -32,7 +32,7 @@ export function Pharmaceutical() {
             alt={'Pharmaceutical image'}
             fill
             sizes="100vw"
-          className="object-cover object-center scale-[1.02] transition-transform duration-[2200ms] ease-out motion-safe:group-hover:scale-[1.05]"
+         className="object-cover object-[62%_center] sm:object-center scale-[1.08] sm:scale-[1.03] lg:scale-[1.02] transition-transform duration-2200 ease-out motion-safe:group-hover:scale-[1.05]"
             quality={85}
           />
         </motion.div>

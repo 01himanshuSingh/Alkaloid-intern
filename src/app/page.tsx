@@ -8,7 +8,6 @@ import Products from '@/components/products/Products'
 export default function HomePage() {
   return (  
     <main className="min-h-screen">
-     
       <Hero />
       <Certifications />
       <Events />

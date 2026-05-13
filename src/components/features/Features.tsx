@@ -44,7 +44,7 @@ export default function Features() {
 
           {/* Title */}
           <h3
-           className="mb-4 text-[16px] text-center lg:text-[18px] 2xl:text-[20px] leading-tight text-[#004C8C]"
+           className="mb-4 text-[15px] text-center lg:text-[18px] 2xl:text-[20px] leading-tight text-[#004C8C]"
             style={{
               letterSpacing: '1px',
               fontWeight:600
@@ -55,7 +55,7 @@ export default function Features() {
 
           {/* Description */}
           <p
-           className="font-body text-center text-[13px] lg:text-[14px] 2xl:text-[15px] leading-[1.85] text-mutedText"
+           className="font-body text-center text-[12px] lg:text-[14px] 2xl:text-[15px] leading-[1.85] text-mutedText"
           >
             {feature.description}
           </p>

@@ -18,7 +18,7 @@ export default function SimilarProducts({ products }: SimilarProductsProps) {
       viewport={VIEWPORT_ONCE}
       aria-label="Similar Products"
     >
-      <h2 className="font-['Geologica'] text-sm md:text-base lg:text-[20px] 2xl:text-[30px] uppercase tracking-widest font-bold text-[#374151] mb-5">
+      <h2 className="font-['Geologica'] text-[14px] md:text-base lg:text-[20px] 2xl:text-[30px] uppercase tracking-widest font-bold text-[#374151] mb-5">
         Similar Products
       </h2>
       <ProductList items={products} />

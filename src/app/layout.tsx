@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import SmoothScroll from "@/components/Lazyscroll-component/SmoothScroll";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
   
@@ -55,6 +56,7 @@ export default function RootLayout({
       className={`${geologica.className} ${libreBaskerville.variable}`}
     >
       <body className="min-h-full flex flex-col"><Navbar/>
+      <SmoothScroll/>
       {children}
       <Footer/>
       </body>
