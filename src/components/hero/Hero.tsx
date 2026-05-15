@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Play } from 'lucide-react'
-
+import Link from "next/link";
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-hidden">
@@ -59,14 +59,14 @@ export default function Hero() {
   transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }} 
   className="pl-4 md:pl-6"
 >
-  <a
-    href="/about-us"
-    className="inline-block font-inter font-600 text-xs tracking-widest uppercase text-white relative group transition-all  duration-300"
-  >
-    READ MORE
+ <Link
+  href="/about-us"
+  className="inline-block font-inter font-600 text-xs tracking-widest uppercase text-white relative group transition-all duration-300"
+>
+  READ MORE
 
-    <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-white transition-all duration-300 group-hover:w-0" />
-  </a>
+  <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-white transition-all duration-300 group-hover:w-0" />
+</Link>
 </motion.div>
           </div>
 
