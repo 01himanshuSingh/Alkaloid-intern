@@ -99,4 +99,5 @@ export const QUICK_LINKS: NavLink[] = [
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "History", href: "/history" },
+  { label: "Regular Compliance", href: "/regulatory-compliance" },
 ];
