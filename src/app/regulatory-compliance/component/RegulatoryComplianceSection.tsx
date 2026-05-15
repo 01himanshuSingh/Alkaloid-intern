@@ -2,13 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-  staggerContainerVariants,
-  fadeUpVariants,
-  slideRightVariants,
-  defaultViewport,
-} from "@/constant/animations";
-import type { ComplianceSectionData } from "../types/regulatory";
+import { ComplianceSectionData } from "./type/regulatory";
+import { defaultViewport, fadeUpVariants, slideRightVariants, staggerContainerVariants } from "@/constant/animations";
+
 
 interface RegulatoryComplianceSectionProps {
   data: ComplianceSectionData;
@@ -20,7 +16,7 @@ export default function RegulatoryComplianceSection({
   return (
     <section
       aria-labelledby="regulatory-heading"
-      className="bg-white py-16 md:py-20 lg:py-28"
+      className="bg-white py-20 md:py-25 lg:py-28"
     >
       <div className="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -76,7 +72,7 @@ export default function RegulatoryComplianceSection({
             whileInView="visible"
             viewport={defaultViewport}
             variants={slideRightVariants}
-            className="relative w-full overflow-hidden  grouph-[260px] sm:h-[320px] md:h-[400px] lg:min-h-[430px]"
+            className="relative w-full overflow-hidden  group h-[260px] sm:h-[320px] md:h-[400px] lg:min-h-[400px]"
           >
             <Image
               src={data.images[0].src}

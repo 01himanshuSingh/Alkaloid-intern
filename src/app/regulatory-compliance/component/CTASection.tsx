@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { CTASectionData } from "../types/regulatory";
 import MolecularBackground from "./MolecularBackground";
 import { defaultViewport, fadeUpVariants, staggerContainerVariants } from "@/constant/animations";
 
 interface CTASectionProps {
-  data: CTASectionData;
+  data: any;
 }
 
 export default function CTASection({ data }: CTASectionProps) {
@@ -55,7 +54,7 @@ export default function CTASection({ data }: CTASectionProps) {
             variants={staggerContainerVariants}
             className="flex flex-col w-full max-w-xs gap-4 mt-2"
           >
-            {data.buttons.map((btn) => (
+            {data.buttons.map((btn:any) => (
               <motion.div key={btn.id} variants={fadeUpVariants}>
                 <Link
                   href={btn.href}

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import RegulatoryComplianceSection from "./component/RegulatoryComplianceSection";
 import GlobalAcceptanceSection from "./component/GlobalAcceptanceSection";
 import CTASection from "./component/CTASection";
-import { regulatoryPageData } from "./component/regulatory";
+import { regulatoryPageData } from "./data/regulatory";
+
 
 export const metadata: Metadata = {
   title: "Regulatory Compliance | APL Alkaloids",

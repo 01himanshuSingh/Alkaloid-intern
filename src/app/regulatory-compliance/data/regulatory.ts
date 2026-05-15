@@ -1,4 +1,4 @@
-import { RegulatoryPageData } from "../types/regulatory";
+import { RegulatoryPageData } from "../component/type/regulatory";
 
 export const regulatoryPageData: RegulatoryPageData = {
   compliance: {
@@ -33,7 +33,7 @@ export const regulatoryPageData: RegulatoryPageData = {
     ],
     images: [
       {
-        src: "/PNG/Block-Facility-1536x910.webp",
+        src: "/PNG/Development-Lab-1536x910.webp",
         alt: "APL pharmaceutical laboratory facility",
       },
     ],
@@ -41,6 +41,10 @@ export const regulatoryPageData: RegulatoryPageData = {
 
   globalAcceptance: {
     heading: "Global Acceptance",
+    image: {
+      src: "/images/regulatory/global-acceptance.jpg",
+      alt: "APL Alkaloids global export operations and team",
+    },
     paragraphs: [
       "As an Export House recognised by the Government of India for consistently delivering high-quality products, APL takes pride in serving clients worldwide with reliability and trust.",
       "Over the years, we have built lasting relationships across diverse markets, and our global footprint continues to grow.",

@@ -1,12 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { GlobalAcceptanceSectionData } from "../types/regulatory";
-import { defaultViewport, fadeUpVariants, staggerContainerVariants } from "@/constant/animations";
+import { defaultViewport, fadeUpVariants, slideLeftVariants, staggerContainerVariants } from "@/constant/animations";
 
 interface GlobalAcceptanceSectionProps {
-  data: GlobalAcceptanceSectionData;
+  data: any;
 }
+
+const SECTION_IMAGE = {
+  src: "/PNG/Block-Facility-1536x910.webp",
+  alt: "APL Alkaloids global export operations and team",
+};
 
 export default function GlobalAcceptanceSection({
   data,
@@ -18,24 +23,32 @@ export default function GlobalAcceptanceSection({
     >
       <div className="max-w-screen-xl mx-auto px-6 md:px-10 lg:px-16">
 
-        {/* Asymmetric layout: empty left + content right on desktop */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-          {/* Left spacer — decorative border line on desktop */}
-          <div
-            aria-hidden="true"
-            className="hidden lg:flex items-center justify-center"
+          {/* ── LEFT: Image ── */}
+          <motion.figure
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            variants={slideLeftVariants}
+            className="relative w-full overflow-hidden group h-[260px] sm:h-[320px] md:h-[400px] lg:min-h-[400px] order-2 lg:order-1"
           >
-            <div className="w-px h-full min-h-[260px] bg-gradient-to-b from-transparent via-[#0B67B2]/20 to-transparent" />
-          </div>
+            <Image
+              src={SECTION_IMAGE.src}
+              alt={SECTION_IMAGE.alt}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+            />
+          </motion.figure>
 
-          {/* Right: Content */}
+          {/* ── RIGHT: Content ── */}
           <motion.article
             initial="hidden"
             whileInView="visible"
             viewport={defaultViewport}
             variants={staggerContainerVariants}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 order-1 lg:order-2"
           >
             {/* Heading */}
             <motion.div variants={fadeUpVariants}>
@@ -49,7 +62,7 @@ export default function GlobalAcceptanceSection({
 
             {/* Body paragraphs */}
             <div className="flex flex-col gap-4">
-              {data.paragraphs.map((para, idx) => (
+              {data.paragraphs.map((para: any, idx: any) => (
                 <motion.p
                   key={idx}
                   variants={fadeUpVariants}
@@ -66,12 +79,12 @@ export default function GlobalAcceptanceSection({
                 {data.countriesLabel}
               </p>
 
-              {/* Country pills grid */}
+              {/* Country pills */}
               <ul
                 className="flex flex-wrap gap-2"
                 aria-label="Countries APL serves"
               >
-                {data.countries.map((country) => (
+                {data.countries.map((country: any) => (
                   <motion.li
                     key={country}
                     variants={fadeUpVariants}

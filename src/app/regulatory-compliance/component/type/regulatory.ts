@@ -15,6 +15,10 @@ export interface ComplianceSectionData {
 
 export interface GlobalAcceptanceSectionData {
   heading: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   paragraphs: string[];
   countriesLabel: string;
   countries: string[];
