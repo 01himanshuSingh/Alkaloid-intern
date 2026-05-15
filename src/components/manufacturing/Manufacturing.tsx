@@ -33,7 +33,7 @@ export default function Manufacturing() {
   <h2
     className="font-montserrat font-500 leading-tight mb-8"
     style={{
-      fontSize: 'clamp(20px, 4vw, 48px)',
+      fontSize: 'clamp(23px, 4vw, 48px)',
       letterSpacing: '-1px',
       color: '#88A933',
       fontWeight: 500,

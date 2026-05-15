@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#005A9C' }} className="py-12 md:py-16">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-1 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8 lg:gap-10">
           {/* Logo Column */}
           <div className="flex flex-col">
             <APLLogoWhite />
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-montserrat font-700 text-[#88A933] text-[14px] md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
+            <h4 className="font-montserrat font-700 text-[#88A933] text-[16px] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               QUICK LINKS
             </h4>
             <nav>
