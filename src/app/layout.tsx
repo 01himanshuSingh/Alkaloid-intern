@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import SmoothScroll from "@/components/Lazyscroll-component/SmoothScroll";
+import { Toaster } from "sonner";
 
 const inter = Inter({subsets:['latin'],variable:'--font-sans'});
   
@@ -148,6 +149,11 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col"><Navbar/>
       <SmoothScroll/>
+      <Toaster
+  position="top-right"
+  richColors
+  closeButton
+/>
       {children}
       <Footer/>
       </body>

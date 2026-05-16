@@ -4,6 +4,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const EVENTS_DATA: EventItem[] = [
@@ -95,9 +96,11 @@ export const FEATURES_DATA: FeatureItem[] = [
 ];
 
 export const QUICK_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about-us" },
   { label: "Products", href: "/products" },
   { label: "History", href: "/history" },
   { label: "Regular Compliance", href: "/regulatory-compliance" },
+  {
+    label: "Corporate Social Responsibility",
+    href: "/corporate-social-responsibility",
+  },
 ];

@@ -33,10 +33,10 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 as="h2"
                 id="objectives-heading"
                 variant="olive"
-                className="text-[16px] md:text-base lg:text-[28px] 2xl:text-[35px] leading-relaxed"
+                className="text-[18px]  lg:text-[28px] 2xl:text-[35px] leading-relaxed"
               >
                 OBJECTIVES
-                <br />
+                <br className="hidden lg:block" />
                 &amp; PRINCIPLES
               </SectionHeading>
             </motion.div>
