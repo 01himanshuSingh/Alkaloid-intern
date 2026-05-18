@@ -33,7 +33,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 as="h2"
                 id="objectives-heading"
                 variant="olive"
-                className="text-[18px]  lg:text-[28px] 2xl:text-[35px] leading-relaxed"
+                className="text-[20px] font-semibold  lg:text-[28px] 2xl:text-[35px] leading-relaxed"
               >
                 OBJECTIVES
                 <br className="hidden lg:block" />

@@ -308,7 +308,7 @@ export default function CSRSection({ imageSrc }: { imageSrc?: string }) {
 
 
             {/* heading */}
-            <h2 className="apl-heading" style={{ color: "#0B67B2" }}> 
+            <h2 className="apl-heading  " style={{ color: "#0B67B2" }}> 
              CSR Initiatives
             </h2>
 

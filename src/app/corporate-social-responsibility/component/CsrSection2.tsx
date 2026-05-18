@@ -117,7 +117,7 @@ function CSRItem({ item, itemIndex }: { item: CSRCategory; itemIndex: number }) 
 
         <h2
           id={`csr-heading-${item.index}`}
-          className="font-['Geologica'] text-[20px] md:text-2xl lg:text-[35px] 2xl:text-[42px] font-normal leading-[1.1] tracking-tight text-[#0B67B2]"
+          className="font-['Geologica'] text-[24px] md:text-2xl lg:text-[35px] 2xl:text-[42px] font-semibold leading-[1.1] tracking-tight text-[#0B67B2]"
         >
           {item.heading.map((line, i) =>
             i === item.heading.length - 1 ? (
@@ -218,14 +218,7 @@ export default function CSRSection2() {
       </main>
 
       {/* ── Footer ────────────────────────────────────────────────── */}
-      <footer className="px-6 md:px-10 py-5 border-t border-stone-200/60 flex items-center justify-between">
-        <span className="text-[10px] uppercase tracking-[0.18em] text-stone-300">
-          Alkaloids Private Limited
-        </span>
-        <span className="font-serif text-[11px] text-stone-300 tracking-wide">
-          4 Initiatives
-        </span>
-      </footer>
+     
 </Container>
     </section>
   );

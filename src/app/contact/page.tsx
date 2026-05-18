@@ -253,30 +253,14 @@ function BusinessHoursCard() {
       </h2>
 
     <div
-  className="
-    grid 
-    grid-cols-1 
-    sm:grid-cols-2 
-    lg:grid-cols-3 
-    divide-y 
-    sm:divide-y-0 
-    lg:divide-x 
-    divide-neutral-100
-    gap-4
-  "
+  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 lg:divide-x divide-neutral-100 gap-4"
   role="list"
   aria-label="Business hours"
 >
   {BUSINESS_HOURS.map((item) => (
     <div
       key={item.day}
-      className="
-        py-3
-        lg:py-0
-        lg:px-4
-        first:lg:pl-0
-        last:lg:pr-0
-      "
+      className="py-3 lg:py-0 lg:px-4 first:lg:pl-0 last:lg:pr-0"
       role="listitem"
     >
       <p className="text-[9.5px] lg:text-[10px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-400 mb-1">
@@ -308,23 +292,30 @@ export default function ContactSection() {
         <Container>
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Header ─────────────────────────────────────────────────────── */}
-        <motion.div
-          className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={fadeUp}
-          custom={0}
-        >
-         <h1 className="text-[18px] max-w-[490px] lg:text-[30px] p-2 2xl:text-[38px] font-['Geologica'] font-semibold tracking-tight text-[#0B67B2] leading-none">
-  For quality, reliability and consistency,{" "}
-  <span className="text-[#0B67B2] font-light">reach out to us.</span>
-</h1>
-          <p className="text-[13px] font-['Geologica'] lg:text-[15px] 2xl:text-[18px] leading-7 text-neutral-500 max-w-sm md:text-right">
-            If you have any questions, please feel free to get in touch with us via
-            phone, text, email, the form below.
-          </p>
-        </motion.div>
+   <motion.div
+  className="flex flex-col items-center text-center gap-6 mb-10"
+  initial="hidden"
+  animate={inView ? "visible" : "hidden"}
+  variants={fadeUp}
+  custom={0}
+>
+  {/* First Row */}
+  <div className="w-full flex justify-center">
+    <h1 className="text-[22px] sm:text-[28px] lg:text-[42px] 2xl:text-[52px] font-['Geologica'] font-semibold tracking-tight text-[#0B67B2] leading-tight max-w-[1300px] lg:max-w-[1200px]">
+      For quality,  consistency,
+  
+      reach out to us.
+    </h1>
+  </div>
+
+  {/* Second Row */}
+  <div className="w-full flex justify-center">
+    <p className="text-[14px] sm:text-[15px] lg:text-[17px] 2xl:text-[19px] leading-7 text-neutral-500 max-w-[650px] lg:max-w-[950px] 2xl:max-w-[1050px] font-['Geologica']">
+      If you have any questions, please feel free to get in touch
+      with us via phone, text, email, or the form below.
+    </p>
+  </div>
+</motion.div>
 
         {/* ── Content Grid ────────────────────────────────────────────────── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">

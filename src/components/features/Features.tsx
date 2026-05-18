@@ -44,7 +44,7 @@ export default function Features() {
 
           {/* Title */}
           <h3
-           className="mb-4 text-[15px] text-center lg:text-[18px] 2xl:text-[20px] leading-tight text-[#004C8C]"
+           className="mb-4 text-[16px] font-semibold text-center lg:text-[18px] 2xl:text-[20px] leading-tight text-[#004C8C]"
             style={{
               letterSpacing: '1px',
               fontWeight:600

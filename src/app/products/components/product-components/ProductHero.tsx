@@ -38,7 +38,7 @@ export default function ProductHero({ heroImage }: ProductHeroProps) {
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          className="font-['Geologica'] text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-widest text-[#88A933] drop-shadow-lg text-center"
+          className="font-['Geologica'] text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-widest text-white/90 drop-shadow-lg text-center"
         >
           Our Products
         </motion.h1>

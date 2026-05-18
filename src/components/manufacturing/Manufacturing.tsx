@@ -31,12 +31,11 @@ export default function Manufacturing() {
   transition={{ duration: 0.7, ease: 'easeOut' }}
 >
   <h2
-    className="font-montserrat font-500 leading-tight mb-8"
+    className="font-['Geologica'] font-semibold leading-tight mb-8"
     style={{
-      fontSize: 'clamp(23px, 4vw, 48px)',
+      fontSize: 'clamp(25px, 4vw, 48px)',
       letterSpacing: '-1px',
       color: '#88A933',
-      fontWeight: 500,
     }}
   >
     MANUFACTURING
