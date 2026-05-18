@@ -69,33 +69,35 @@ import { toast } from "sonner";
 function ContactForm() {
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(
-    e: FormEvent<HTMLFormElement>
-  ) {
-    e.preventDefault();
+ async function handleSubmit(
+  e: FormEvent<HTMLFormElement>
+) {
+  e.preventDefault();
 
-    setLoading(true);
+  const form = e.currentTarget;
 
-    try {
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        e.currentTarget,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      );
+  setLoading(true);
 
-      toast.success("Message sent successfully!");
+  try {
+    await emailjs.sendForm(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      form,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
 
-      e.currentTarget.reset();
+    toast.success("Message sent successfully!");
 
-    } catch (error) {
-      console.error("EMAILJS ERROR:", error);
+    form.reset();
 
-      toast.error("Failed to send message.");
-    } finally {
-      setLoading(false);
-    }
+  } catch (error) {
+    console.error("EMAILJS ERROR:", error);
+
+    toast.error("Failed to send message.");
+  } finally {
+    setLoading(false);
   }
+}
 
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
