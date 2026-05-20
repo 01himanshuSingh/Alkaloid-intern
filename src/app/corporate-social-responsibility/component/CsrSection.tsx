@@ -292,7 +292,7 @@ export default function CSRSection({ imageSrc }: { imageSrc?: string }) {
     <>
       <style dangerouslySetInnerHTML={{ __html: STYLES }} />
 
-      <section ref={sectionRef} className="apl-section" aria-label="CSR Initiatives">
+      <section ref={sectionRef} className="apl-section  " aria-label="CSR Initiatives">
         <Container>
 
         

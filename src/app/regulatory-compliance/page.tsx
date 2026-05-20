@@ -21,7 +21,7 @@ export default function RegulatoryPage() {
   const { compliance, globalAcceptance, cta } = regulatoryPageData;
 
   return (
-    <main id="main-content">
+    <main id="main-content" className="pt-5 2xl:pt-12">
       <RegulatoryComplianceSection data={compliance} />
       <GlobalAcceptanceSection data={globalAcceptance} />
       {/* <CTASection data={cta} /> */}

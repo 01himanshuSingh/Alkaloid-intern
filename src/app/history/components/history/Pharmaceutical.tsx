@@ -11,7 +11,7 @@ export function Pharmaceutical() {
   return (
     <section
       aria-labelledby="milestone-heading"
-     className="relative w-full overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[620px] lg:min-h-[720px] 2xl:min-h-[860px]"
+     className="relative w-full overflow-hidden min-h-[420px] sm:min-h-[520px] md:min-h-[620px] lg:min-h-[700px] 2xl:min-h-[850px]"
 
     >
       <motion.div

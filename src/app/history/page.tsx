@@ -99,7 +99,7 @@ export default function HistoryPage() {
     <main aria-label="Company history page">
       <HistoryHero data={hero} />
       <JourneyIntro data={journeyIntro} />
-      <Pharmaceutical/>
+      <Pharmaceutical/> 
       <StatisticsSection items={statistics} />
       <MilestoneBanner data={milestoneBanner} />
     </main>

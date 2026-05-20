@@ -67,22 +67,25 @@ export default function RegulatoryComplianceSection({
           </motion.article>
 
           {/* ── RIGHT: Responsive Square Image ── */}
-          <motion.figure
-            initial="hidden"
-            whileInView="visible"
-            viewport={defaultViewport}
-            variants={slideRightVariants}
-            className="relative w-full overflow-hidden  group h-[260px] sm:h-[320px] md:h-[400px] lg:min-h-[400px]"
-          >
-            <Image
-              src={data.images[0].src}
-              alt={data.images[0].alt}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-              priority
-            />
-          </motion.figure>
+        <motion.figure
+  initial="hidden"
+  whileInView="visible"
+  viewport={defaultViewport}
+  variants={slideRightVariants}
+  className="relative w-full overflow-hidden group rounded-xl bg-white h-[320px] sm:h-[420px] md:h-[520px] lg:h-[420px] 2xl:h-[560px]">
+  <Image
+    src={data.images[0].src}
+    alt={data.images[0].alt}
+    fill
+    priority
+    quality={90}
+    sizes="
+      (max-width: 640px) 100vw,
+      (max-width: 1024px) 100vw,
+      50vw
+    "
+    className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"/>
+</motion.figure>
 
         </div>
       </div>

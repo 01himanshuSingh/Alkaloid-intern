@@ -21,12 +21,12 @@ export default function OverlayText({ text, className }: OverlayTextProps) {
       animate="visible"
       variants={fadeUpVariants}
     >
-      <div className="max-w-xs md:max-w-sm lg:max-w-md 2xl:max-w-lg">
+      <div className="max-w-xs md:max-w-sm lg:max-w-md 2xl:max-w-[730px]">
         <p
           className={cn(
             "font-200 font-light",
             "text-white   leading-relaxed",
-            "text-base md:text-lg lg:text-[27px]  2xl:text-[35px]",
+            "text-base md:text-lg lg:text-[27px]  2xl:text-[38px]",
             "drop-shadow-md"
           )}
         >

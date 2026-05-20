@@ -26,21 +26,26 @@ export default function GlobalAcceptanceSection({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* ── LEFT: Image ── */}
-          <motion.figure
-            initial="hidden"
-            whileInView="visible"
-            viewport={defaultViewport}
-            variants={slideLeftVariants}
-            className="relative w-full overflow-hidden group h-[260px] sm:h-[320px] md:h-[400px] lg:min-h-[400px] order-2 lg:order-1"
-          >
-            <Image
-              src={SECTION_IMAGE.src}
-              alt={SECTION_IMAGE.alt}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-            />
-          </motion.figure>
+      <motion.figure
+  initial="hidden"
+  whileInView="visible"
+  viewport={defaultViewport}
+  variants={slideLeftVariants}
+  className="relative w-full flex items-center justify-center overflow-hidden group rounded-xl order-2 lg:order-1 h-[320px] sm:h-[420px] md:h-[520px] lg:h-[620px] 2xl:h-[760px]"
+>
+  <Image
+    src={SECTION_IMAGE.src}
+    alt={SECTION_IMAGE.alt}
+    fill
+    priority
+    quality={90}
+    sizes="
+      (max-width: 640px) 100vw,
+      (max-width: 1024px) 100vw,
+      50vw
+    "
+    className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105"/>
+</motion.figure>
 
           {/* ── RIGHT: Content ── */}
           <motion.article
@@ -88,15 +93,7 @@ export default function GlobalAcceptanceSection({
                   <motion.li
                     key={country}
                     variants={fadeUpVariants}
-                    className={[
-                      "font-['Geologica',sans-serif] text-xs font-medium",
-                      "px-3 py-1.5 rounded-full border border-[#0B67B2]/25",
-                      "bg-white text-[#0B67B2]",
-                      "transition-all duration-300",
-                      "hover:bg-[#0B67B2] hover:text-white hover:border-[#0B67B2]",
-                      "cursor-default select-none",
-                    ].join(" ")}
-                  >
+                    className={["font-['Geologica',sans-serif] text-xs font-medium","px-3 py-1.5 rounded-full border border-[#0B67B2]/25","bg-white text-[#0B67B2]","transition-all duration-300","hover:bg-[#0B67B2] hover:text-white hover:border-[#0B67B2]","cursor-default select-none",].join(" ")}>
                     {country}
                   </motion.li>
                 ))}

@@ -101,7 +101,7 @@ function ContactForm() {
 
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
-      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-900 mb-5">
+      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[18px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-800 mb-5">
         Get in touch
       </h2>
 
@@ -115,7 +115,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="contact-name"
-              className="block text-[10px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
+              className="block text-[10px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
             >
               Name
             </label>
@@ -135,7 +135,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="contact-phone"
-              className="block text-[10px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
+              className="block text-[10px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
             >
               Phone number
             </label>
@@ -157,7 +157,7 @@ function ContactForm() {
         <div className="mb-3">
           <label
             htmlFor="contact-email"
-            className="block text-[10px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
+            className="block text-[10px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
           >
             Email
           </label>
@@ -178,7 +178,7 @@ function ContactForm() {
         <div className="mb-4">
           <label
             htmlFor="contact-message"
-            className="block text-[10px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
+            className="block text-[10px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-medium uppercase tracking-[0.1em] text-neutral-400 mb-1"
           >
             Your message
           </label>
@@ -198,7 +198,7 @@ function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full h-[46px] lg:h-[46px] 2xl:h-[46px] hover:cursor-pointer rounded-md bg-[#88A933] hover:bg-[#7a982d] active:bg-[#6f8c28] disabled:opacity-60 text-white text-[11px] lg:text-[12px] 2xl:text-[15px] font-semibold uppercase tracking-[0.12em] transition-colors duration-150"
+          className="w-full h-[46px] lg:h-[46px] 2xl:h-[46px] hover:cursor-pointer rounded-md bg-[#88A933] hover:bg-[#7a982d] active:bg-[#6f8c28] disabled:opacity-60 text-white text-[11px] lg:text-[12px] 2xl:text-[16px] font-semibold uppercase tracking-[0.12em] transition-colors duration-150"
         >
           {loading ? "Sending..." : "Send message"}
         </button>
@@ -212,7 +212,7 @@ ContactForm;
 function ContactInfoCard() {
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
-      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-900 mb-4">
+      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-900 mb-4">
         Contact information
       </h2>
 
@@ -226,18 +226,18 @@ function ContactInfoCard() {
               {item.icon}
             </span>
             <div>
-              <p className="text-[10px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.1em] text-neutral-400 mb-0.5">
+              <p className="text-[10px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-semibold uppercase tracking-[0.1em] text-neutral-400 mb-0.5">
                 {item.label}
               </p>
               {item.href ? (
                 <a
                   href={item.href}
-                  className="text-[13px] lg:text-[14px] 2xl:text-[15px]  text-neutral-800 hover:text-neutral-600 transition-colors"
+                  className="text-[13px] lg:text-[14px] 2xl:text-[16px]  text-neutral-800 hover:text-neutral-600 transition-colors"
                 >
                   {item.value}
                 </a>
               ) : (
-                <p className="text-[13px] lg:text-[14px] 2xl:text-[15px] text-neutral-800">{item.value}</p>
+                <p className="text-[13px] lg:text-[14px] 2xl:text-[16px] text-neutral-800">{item.value}</p>
               )}
             </div>
           </li>
@@ -250,7 +250,7 @@ function ContactInfoCard() {
 function BusinessHoursCard() {
   return (
     <div className="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
-      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-900 mb-4">
+      <h2 className="text-[11px] lg:text-[11px] 2xl:text-[16px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-900 mb-4">
         Business hours
       </h2>
 
@@ -265,11 +265,11 @@ function BusinessHoursCard() {
       className="py-3 lg:py-0 lg:px-4 first:lg:pl-0 last:lg:pr-0"
       role="listitem"
     >
-      <p className="text-[9.5px] lg:text-[10px] 2xl:text-[15px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-400 mb-1">
+      <p className="text-[9.5px] lg:text-[10px] 2xl:text-[16px] font-['Geologica'] font-semibold uppercase tracking-[0.12em] text-neutral-400 mb-1">
         {item.day}
       </p>
 
-      <p className="text-[12.5px] lg:text-[13px] 2xl:text-[15px] text-neutral-800 leading-snug">
+      <p className="text-[12.5px] lg:text-[13px] 2xl:text-[16px] text-neutral-800 leading-snug">
         {item.hours}
       </p>
     </div>
@@ -289,10 +289,10 @@ export default function ContactSection() {
     <section
       ref={ref}
       aria-label="Contact Us"
-      className="bg-neutral-50 py-20 lg:py-27 2xl:py-32 px-6 lg:px-10"
+      className="bg-neutral-50 py-28 lg:py-27 2xl:py-40 px-6 lg:px-10"
     >
         <Container>
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl 2xl:max-w-[1400px] mx-auto">
 
    <motion.div
   className="flex flex-col items-center text-center gap-6 mb-10"
@@ -303,7 +303,7 @@ export default function ContactSection() {
 >
   {/* First Row */}
   <div className="w-full flex justify-center">
-    <h1 className="text-[22px] sm:text-[28px] lg:text-[42px] 2xl:text-[52px] font-['Geologica'] font-semibold tracking-tight text-[#0B67B2] leading-tight max-w-[1300px] lg:max-w-[1200px]">
+    <h1 className="text-[22px] sm:text-[28px] lg:text-[42px] 2xl:text-[55px] font-['Geologica'] font-semibold tracking-tight text-[#0B67B2] leading-tight max-w-[1300px] lg:max-w-[1200px]">
       For quality,  consistency,
   
       reach out to us.
@@ -312,7 +312,7 @@ export default function ContactSection() {
 
   {/* Second Row */}
   <div className="w-full flex justify-center">
-    <p className="text-[14px] sm:text-[15px] lg:text-[17px] 2xl:text-[19px] leading-7 text-neutral-500 max-w-[650px] lg:max-w-[950px] 2xl:max-w-[1050px] font-['Geologica']">
+    <p className="text-[14px] sm:text-[15px] lg:text-[17px] 2xl:text-[20px] leading-7 text-neutral-500 max-w-[650px] lg:max-w-[950px] 2xl:max-w-[1050px] font-['Geologica']">
       If you have any questions, please feel free to get in touch
       with us via phone, text, email, or the form below.
     </p>
@@ -320,7 +320,7 @@ export default function ContactSection() {
 </motion.div>
 
         {/* ── Content Grid ────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 2xl:gap-7 items-start">
 
           {/* Left: Contact Form */}
           <motion.div
@@ -333,7 +333,7 @@ export default function ContactSection() {
           </motion.div>
 
           {/* Right: Info + Hours stacked */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 2xl:gap-7">
             <motion.div
               initial="hidden"
               animate={inView ? "visible" : "hidden"}

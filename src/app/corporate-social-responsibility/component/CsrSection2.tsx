@@ -115,22 +115,28 @@ function CSRItem({ item, itemIndex }: { item: CSRCategory; itemIndex: number }) 
       <div>
       
 
-        <h2
-          id={`csr-heading-${item.index}`}
-          className="font-['Geologica'] text-[24px] md:text-2xl lg:text-[35px] 2xl:text-[42px] font-semibold leading-[1.1] tracking-tight text-[#0B67B2]"
-        >
-          {item.heading.map((line, i) =>
-            i === item.heading.length - 1 ? (
-              <span key={i} className="block  text-[#0B67B2]">
-                {line}
-              </span>
-            ) : (
-              <span key={i} className="block">
-                {line}
-              </span>
-            )
-          )}
-        </h2>
+      <h2
+  id={`csr-heading-${item.index}`}
+  className="font-['Geologica'] text-[24px] md:text-2xl lg:text-[35px] 2xl:text-[42px] font-semibold leading-[1.1] tracking-tight text-[#0B67B2] 2xl:flex 2xl:gap-3"
+>
+  {item.heading.map((line, i) =>
+    i === item.heading.length - 1 ? (
+      <span
+        key={i}
+        className="block 2xl:inline text-[#0B67B2]"
+      >
+        {line}
+      </span>
+    ) : (
+      <span
+        key={i}
+        className="block 2xl:inline"
+      >
+        {line}
+      </span>
+    )
+  )}
+</h2>
       </div>
 
       {/* Right Column: Description + Initiatives */}

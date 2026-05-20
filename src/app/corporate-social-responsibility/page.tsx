@@ -4,7 +4,7 @@ import CSRSection2 from './component/CsrSection2'
 
 function page() {
   return (
-    <main>
+    <main className='py-1 2xl:py-10'>
         <CSRSection/>
         <CSRSection2/>
     </main>

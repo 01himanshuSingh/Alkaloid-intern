@@ -62,7 +62,7 @@ export default function ProductCategorySection({
               <p
   className="group flex items-start gap-3 py-3 border-b border-gray-100 last:border-0 transition-colors">
   <HexagonButton
-    size={22}
+    size={25}
     className="mt-0.5 shrink-0 text-[#0B67B2] group-hover:scale-110 transition-transform duration-200"
   />
 
