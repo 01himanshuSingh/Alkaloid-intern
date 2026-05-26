@@ -94,7 +94,7 @@ const STYLES = `
 
   .apl-heading {
     font-family: 'Geologica', sans-serif;
-    font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+    font-size: clamp(2.6rem, 4.5vw, 3.9rem);
     font-weight: 600; line-height: 1.08;
     color: #0B67B2;
     letter-spacing: -.02em;
