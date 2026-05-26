@@ -50,7 +50,7 @@ const STYLES = `
     background: #ffffff;
     position: relative;
     overflow: hidden;
-    padding: 7rem 0;
+    padding: 2rem 0;
   }
 
   /* animated mesh bg */
@@ -192,7 +192,7 @@ const STYLES = `
       position: relative;
   z-index: 2;
   width: 100%;
-  height: 100%;
+  height: 95%;
   border-radius: 24px;
     overflow: hidden;
     box-shadow:
@@ -274,6 +274,29 @@ const STYLES = `
     .apl-heading { font-size: 2.2rem; }
     .apl-body    { font-size: .97rem; }
   }
+
+  @media (min-width: 1536px) {
+  .apl-inner {
+    padding: 0 5.1rem;
+  }
+     .apl-heading {
+    font-family: 'Geologica', sans-serif;
+    font-size: clamp(2.6rem, 4.5vw, 4rem);
+    font-weight: 600; line-height: 1.08;
+    color: #0B67B2;
+    letter-spacing: -.02em;
+   opacity: 0;
+     animation: fadeUp .8s cubic-bezier(.22,1,.36,1) .35s forwards;
+  }
+      .apl-body {
+  font-family: 'Libre_Baskerville', serif;
+   
+    color: var(--apl-slate); font-weight: 300;
+    max-width: 640px; letter-spacing: .01em;
+    opacity: 0;
+    animation: fadeUp .8s cubic-bezier(.22,1,.36,1) .5s forwards;
+  }
+}
 `;
 
 // ─── Component ────────────────────────────────────────────────────────────────
@@ -316,7 +339,7 @@ export default function CSRSection({ imageSrc }: { imageSrc?: string }) {
          
 
             {/* body copy */}
-            <p className="apl-body line-height-[1.9] text-15px lg:text-[17px] 2xl:text-[20px]">
+            <p className="apl-body line-height-[1.9] text-15px lg:text-[17px] 2xl:text-[24px]">
               At APL, we see CSR as a mission to uplift underprivileged communities.
               Spanning Education, Healthcare, Women&rsquo;s Empowerment, Sanitation
               and Animal Welfare, the CSR initiatives at APL are driven by investments
@@ -351,7 +374,7 @@ export default function CSRSection({ imageSrc }: { imageSrc?: string }) {
           </div>
 
           {/* ── RIGHT COLUMN ── */}
-          <div className="apl-right">
+          <div className="apl-right lg:pt-12 2xl:pt-14">
             <div className="apl-img-wrap">
 
               {/* glow layers */}
@@ -363,9 +386,9 @@ export default function CSRSection({ imageSrc }: { imageSrc?: string }) {
               <div className="apl-ring-2" aria-hidden="true" />
 
               {/* circular image */}
-              <div className="apl-circle">
+              <div className="apl-circle ">
                 {imageSrc ? (
-                  <img src={imageSrc} alt="APL CSR community outreach" />
+                  <img src='/PNG/CSRImage May 26, 2026, 02_10_31 PM.png' alt="APL CSR community outreach" />
                 ) : (
                   <div className="apl-placeholder">
                     <svg
