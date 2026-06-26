@@ -1,6 +1,6 @@
 'use client'
-
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useRef } from "react";
 import Image from 'next/image'
 import Container from '@/components/shared/Container'
 
@@ -19,6 +19,33 @@ const IMAGE_ANIMATION = {
 }
 
 export default function Manufacturing() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+  target: sectionRef,
+  offset: ["start 40%", "end 10%"],
+});
+const topY = useTransform(
+  scrollYProgress,
+  [0, 0.35, 0.7, 1],
+  [-60, 0, 0, 40]
+);
+const bottomY = useTransform(
+  scrollYProgress,
+  [0, 0.35, 0.7, 1],
+  [60, 0, 0, -30]
+);
+
+const topScale = useTransform(
+  scrollYProgress,
+  [0, 0.35, 0.7, 1],
+  [0.94, 1, 1, 0.96]
+);
+
+const bottomScale = useTransform(
+  scrollYProgress,
+  [0, 0.35, 0.7, 1],
+  [0.94, 1, 1, 0.96]
+);
   return (
     <section className="py-16 md:py-24" style={{ backgroundColor: '#DCE8C5' }}>
       <Container>
@@ -67,6 +94,7 @@ export default function Manufacturing() {
 
           {/* Right — Hexagon Images */}
          <motion.section
+           ref={sectionRef}
       initial={{ opacity: 0, x: 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -76,23 +104,27 @@ export default function Manufacturing() {
     >
       <div className="relative mx-auto w-full max-w-sm">
         {/* Top Hexagon */}
-        <HexagonCard
-          imageSrc="/Homepage/manufacturing and sourcing 1.png"
-          imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
-          widthClass="w-[220px]"
-          heightClass="h-[248px]"
-          positionClass="ml-auto mr-8"
-          priority
-        />
+     <HexagonCard
+  imageSrc="/Homepage/manufacturing and sourcing 1.png"
+  imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
+  widthClass="w-[220px]"
+  heightClass="h-[248px]"
+  positionClass="ml-auto mr-8"
+  y={topY}
+    scale={topScale}
+  priority
+/>
 
         {/* Bottom Hexagon */}
-        <HexagonCard
-          imageSrc="/Homepage/manufacturing and sourcing 2.png"
-          imageAlt="Pharmaceutical manufacturing experts inspecting production line"
-          widthClass="w-[200px]"
-          heightClass="h-[226px]"
-        positionClass="ml-4 mt-2 md:ml-6 md:-mt-[60px] "
-        />
+     <HexagonCard
+  imageSrc="/Homepage/manufacturing and sourcing 2.png"
+  imageAlt="Pharmaceutical manufacturing experts inspecting production line"
+  widthClass="w-[220px]"
+  heightClass="h-[246px]"
+  positionClass="ml-4 mt-2 md:ml-6 md:-mt-[60px]"
+     y={bottomY}
+    scale={bottomScale}
+/>
       </div>
     </motion.section>
         </div>
@@ -106,16 +138,17 @@ export default function Manufacturing() {
 
 
 
+import { MotionValue } from "framer-motion"
 interface HexagonCardProps {
-  imageSrc: string
-  imageAlt: string
-  widthClass: string
-  heightClass: string
-  positionClass?: string
-  priority?: boolean
+  imageSrc: string;
+  imageAlt: string;
+  widthClass: string;
+  heightClass: string;
+  positionClass?: string;
+  priority?: boolean;
+  y?: MotionValue<number>;
+  scale?: MotionValue<number>;
 }
-
-
 
 function HexagonCard({
   imageSrc,
@@ -124,9 +157,12 @@ function HexagonCard({
   heightClass,
   positionClass,
   priority = false,
+  y,
+  scale,
 }: HexagonCardProps) {
   return (
-    <motion.figure
+   <motion.figure
+  style={{ y, scale }}
       variants={IMAGE_ANIMATION}
       initial="hidden"
       whileInView="visible"

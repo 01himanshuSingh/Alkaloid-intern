@@ -51,7 +51,7 @@ export default function Certifications() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 2xl:gap-20"
+          className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-6 2xl:gap-4"
         >
           {CERTIFICATIONS.map((cert, idx) => (
          <motion.div
@@ -60,7 +60,7 @@ export default function Certifications() {
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   transition={{ duration: 0.5, delay: idx * 0.1 }}
- className="w-[150px] h-[90px] lg:w-[140px] lg:h-[80px] 2xl:w-[190px] 2xl:h-[130px] flex items-center justify-center opacity-100 lg:grayscale lg:opacity-70 lg:hover:grayscale-0 lg:hover:opacity-100 transition-all duration-300 mx-auto"
+ className="w-[150px] h-[90px] lg:w-[140px] lg:h-[80px] 2xl:w-[270px] 2xl:h-[140px] flex items-center justify-center opacity-100 lg:grayscale lg:opacity-70 lg:hover:grayscale-0 lg:hover:opacity-100 transition-all duration-300 mx-auto"
 >
   <Image
     src={cert.imageSrc}

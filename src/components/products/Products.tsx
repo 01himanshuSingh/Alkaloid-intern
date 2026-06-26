@@ -83,11 +83,19 @@ function ProductCard({ product }: { product: ProductItem }) {
       {/* Content */}
       <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between p-5">
         <div className="pr-4">
-          <h3
-          className="text-[15px] lg:text-[18px] 2xl:text-[20px] font-bold leading-tight text-[#0B67B2]"
-            style={{letterSpacing: '0.5px'}} >
-            {product.title}
-          </h3>
+       <motion.h3
+  initial={{ y: 25, opacity: 0 }}
+  whileInView={{ y: 0, opacity: 1 }}
+  viewport={{ once: true, amount: 0.5 }}
+  transition={{
+    duration: 0.7,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+  className="text-[15px] lg:text-[18px] 2xl:text-[20px] font-bold leading-tight text-[#0B67B2]"
+  style={{ letterSpacing: "0.5px" }}
+>
+  {product.title}
+</motion.h3>
         </div>
 
         {/* Arrow */}

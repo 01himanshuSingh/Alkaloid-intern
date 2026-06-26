@@ -76,14 +76,24 @@ export default function Footer() {
 
 function APLLogoWhite() {
   return (
-    <div className="relative w-[120px]  md:w-[260px] lg:w-[300px]  2xl:w-[400px] h-[90px]   md:h-[85px] lg:h-[250px] 2xl:h-[280px] "> 
-      <Image
-        src="/PNG/Copy of Alkaloids Logo Files-06 3.png"
-        alt="Alkaloids Private Limited Logo"
-        fill
-        className="object-contain"
-        priority
-      />
+    <div className="relative
+      w-[140px]
+      md:w-[280px]
+      lg:w-[420px]
+      2xl:w-[500px]
+      h-[90px]
+      md:h-[90px]
+      lg:h-[120px]
+      2xl:h-[140px]
+      overflow-visible"
+    >
+    <Image
+  src="/PNG/Copy of Alkaloids Logo Files-06 3.png"
+  alt="Alkaloids Private Limited Logo"
+  fill
+  priority
+  className="object-contain object-left scale-180  lg:scale-225 2xl:scale-190 origin-left"
+/>
     </div>
   )
 }
