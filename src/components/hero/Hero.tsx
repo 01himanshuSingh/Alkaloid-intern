@@ -83,14 +83,7 @@ export default function Hero() {
         initial={false}
         animate={{ opacity: showControls ? 1 : 0, scale: showControls ? 1 : 0.92 }}
         transition={{ duration: 0.35, ease: 'easeOut' }}
-        className="
-          absolute z-30 pointer-events-none
-          top-54 left-1/2 -translate-x-1/2
-          md:top-1/2 md:left-auto md:right-8
-          lg:right-12 xl:right-16 2xl:right-24
-          md:-translate-y-1/2 md:translate-x-0
-          flex items-center justify-center
-        "
+        className="absolute z-30 pointer-events-none top-54 left-1/2 -translate-x-1/2 md:top-1/2 md:left-auto md:right-8 lg:right-12 xl:right-16 2xl:right-24 md:-translate-y-1/2 md:translate-x-0 flex items-center justify-center"
       >
         <button
           onClick={(e) => {
@@ -99,17 +92,7 @@ export default function Hero() {
             togglePlay()
           }}
           aria-label={isPlaying ? 'Pause background video' : 'Play background video'}
-          className="
-            pointer-events-auto
-            group relative flex items-center justify-center
-            w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20
-            lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32
-            rounded-full
-            bg-white/90 backdrop-blur-xl
-            shadow-[0_15px_40px_rgba(0,0,0,0.35)]
-            transition-all duration-300
-            hover:scale-110 hover:bg-white active:scale-95
-          "
+          className="pointer-events-auto group relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 2xl:w-32 2xl:h-32 rounded-full bg-white/90 backdrop-blur-xl shadow-[0_15px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95"
         >
           {/* Outer ring */}
           <span className="absolute inset-0 rounded-full border border-white/40" />
