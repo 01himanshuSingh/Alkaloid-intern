@@ -70,7 +70,7 @@ export default function ProductDialog({
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative w-full max-w-6xl lg:max-w-6xl 2xl:max-w-7xl max-h-[80vh] lg:max-h-[90vh] 2xl:max-h-[98vh]   flex flex-col overflow-hidden rounded-sm shadow-2xl"
+              className="relative w-full max-w-6xl lg:max-w-5xl 2xl:max-w-7xl max-h-[80vh] lg:max-h-[90vh] 2xl:max-h-[98vh]   flex flex-col overflow-hidden rounded-sm shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* ── Top section: sage-green bg matching screenshot ── */}
@@ -97,7 +97,7 @@ export default function ProductDialog({
 
                 {/* ── Bottom white section: Similar & Other ── */}
                 {(similarProducts.length > 0 || otherProducts.length > 0) && (
-                  <div className="bg-white px-8 py-7 border-t border-gray-100">
+                  <div className="bg-white px-8 py-7 lg:py-2 border-t border-gray-100">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                       {similarProducts.length > 0 && (
                         <SimilarProducts products={similarProducts} onNavigate={onNavigate} />

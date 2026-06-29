@@ -34,7 +34,7 @@ export default function ProductGrid({
       >
         {/* Category heading */}
         <header className="mb-6">
-          <h2 className="font-['Geologica'] text-[20px] md:text-5xl lg:text-5xl 2xl:text-6xl font-semibold text-[#0B67B2] leading-tight">{meta?.label}</h2>
+          <h2 className="font-['Geologica'] text-[24px] md:text-5xl lg:text-4xl 2xl:text-5xl pb-2 font-semibold text-[#0B67B2] leading-tight">{meta?.label}</h2>
           {meta?.description && (
             <p className="font-['Libre_Baskerville'] text-[12px] md:text-base lg:text-[14px] 2xl:text-[18px] text-[#374151]">{meta.description}</p>
           )}

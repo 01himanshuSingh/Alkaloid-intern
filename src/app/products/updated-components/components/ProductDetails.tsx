@@ -23,7 +23,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         {/* Product Name */}
         <h2
           id="dialog-title"
-          className="text-[15px]  md:text-[20px] 2xl:text-[30px] font-[Geologica] uppercase md:text-4xl font-bold text-[#1d4ed8] mb-8 leading-tight"
+          className="text-[17px]  md:text-[20px] 2xl:text-[30px] font-[Geologica] uppercase md:text-4xl font-bold text-[#1d4ed8] mb-8 leading-tight"
         >
           {product.name}
         </h2>
