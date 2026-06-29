@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import Container from '@/components/shared/Container'
 import { QUICK_LINKS } from '@/data'
 import Image from 'next/image'
 
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#005A9C' }} className="py-12 md:py-16">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-8 lg:gap-10">
+  
+       <div className={'max-w-full lg:max-w-7xl 2xl:max-w-[1670px]  mx-auto px-6 md:px-10 lg:px-10'}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8  md:gap-8 lg:gap-10">
           {/* Logo Column */}
-          <div className="flex flex-col">
+          <div className="flex flex-col pl-0">
             <APLLogoWhite />
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Alkaloids Private Limited. All rights reserved.
           </p>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }
