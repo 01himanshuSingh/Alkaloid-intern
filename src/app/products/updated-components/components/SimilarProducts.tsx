@@ -22,7 +22,7 @@ export default function SimilarProducts({
       <div className="flex items-center justify-between mb-3">
         <h3
           id={`section-${label.replace(/\s+/g, "-").toLowerCase()}`}
-          className="text-sm font-semibold text-[#1d4ed8] flex items-center gap-2"
+          className="text-[14px] lg:text-[14px]  font-[Geologica] 2xl:text-[18px] font-semibold text-[#1d4ed8] flex items-center gap-2"
         >
           <span className="w-7 h-7 rounded-full bg-[#1d4ed8]/10 flex items-center justify-center text-[#1d4ed8]">
             {icon === "similar" ? (
@@ -41,7 +41,7 @@ export default function SimilarProducts({
           </span>
           {label}
         </h3>
-        <span className="text-xs text-[#1d4ed8] cursor-pointer hover:underline">View All &rsaquo;</span>
+        <span className="lg:text-[14px] text-[12px] text-[#1d4ed8] cursor-pointer hover:underline">View All &rsaquo;</span>
       </div>
 
       <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
@@ -52,8 +52,8 @@ export default function SimilarProducts({
             className="flex-shrink-0 w-44 text-left border border-gray-200 rounded-sm p-3 hover:border-[#1d4ed8]/40 hover:bg-blue-50/30 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1d4ed8]"
             type="button"
           >
-            <p className="text-xs font-semibold text-gray-800 leading-snug line-clamp-2">{p.name}</p>
-            <p className="text-[10px] text-gray-400 mt-1 truncate">{p.certification}</p>
+            <p className="text-[11px] lg:text-[12px]  font-[Geologica] 2xl:text-[14px] font-semibold text-gray-800 leading-snug line-clamp-2">{p.name}</p>
+            <p className="text-[10px] lg:text-[12px] 2xl:text-[14px] font-[Libre_Baskerville] text-gray-400 mt-1 truncate">{p.certification}</p>
           </button>
         ))}
         {/* Peek arrow */}

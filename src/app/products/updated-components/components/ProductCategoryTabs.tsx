@@ -23,18 +23,7 @@ export default function ProductCategoryTabs({
     <div className="overflow-x-auto scrollbar-none">
       <ul
         role="tablist"
-        className="
-          inline-flex
-          items-center
-          gap-3
-          min-w-max
-          rounded-full
-          bg-[#F8FAFC]
-          p-2
-          border
-          border-slate-200
-          shadow-[0_10px_35px_rgba(15,23,42,0.06)]
-        "
+        className="inline-flex items-center gap-3 min-w-max rounded-sm bg-[#F8FAFC] p-2 border border-slate-200"
       >
         {PRODUCT_CATEGORIES.map((cat) => {
           const isActive = cat.id === activeCategory;
@@ -51,26 +40,7 @@ export default function ProductCategoryTabs({
   aria-controls={`panel-${cat.id}`}
   id={`tab-${cat.id}`}
   onClick={() => onCategoryChange(cat.id)}
-  className={`
-    relative
-
-    px-6
-    py-4
-
-    text-[15px]
-    lg:text-[16px]
-    font-semibold
-    tracking-[0.3px]
-
-    transition-all
-    duration-300
-
-    whitespace-nowrap
-
-    focus:outline-none
-
-    ${
-      isActive
+  className={`relative px-6 py-4 text-[15px] lg:text-[16px] font-semibold tracking-[0.3px] transition-all duration-300 whitespace-nowrap focus:outline-none ${isActive
         ? "text-[#0B67B2]"
         : "text-[#6B7280] hover:text-[#0B67B2]"
     }
