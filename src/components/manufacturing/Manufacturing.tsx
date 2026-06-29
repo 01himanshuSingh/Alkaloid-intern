@@ -107,8 +107,8 @@ const bottomScale = useTransform(
      <HexagonCard
   imageSrc="/Homepage/manufacturing and sourcing 1.png"
   imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
-  widthClass="w-[220px]"
-  heightClass="h-[248px]"
+  widthClass="w-[160px] lg:w-[240px]"
+  heightClass="h-[180px] lg:h-[268px]"
   positionClass="ml-auto mr-8"
   y={topY}
     scale={topScale}
@@ -119,8 +119,8 @@ const bottomScale = useTransform(
      <HexagonCard
   imageSrc="/Homepage/manufacturing and sourcing 2.png"
   imageAlt="Pharmaceutical manufacturing experts inspecting production line"
-  widthClass="w-[220px]"
-  heightClass="h-[246px]"
+  widthClass="w-[180px] lg:w-[240px]"
+  heightClass="h-[180px] lg:h-[266px]"
   positionClass="ml-4 mt-2 md:ml-6 md:-mt-[60px]"
      y={bottomY}
     scale={bottomScale}
@@ -177,8 +177,8 @@ function HexagonCard({
   fill
   priority={priority}
   sizes="(max-width: 768px) 100vw, 320px"
-  className="object-cover  brightness-[1.08] contrast-[1.02] transition-transform duration-700 hover:scale-105"
-  style={{ objectFit: 'cover' }}
+  className="object-contain  brightness-[1.08] contrast-[1.02] transition-transform duration-700 hover:scale-105"
+  style={{ objectFit: 'contain' }}
 />
 
      </motion.figure>
