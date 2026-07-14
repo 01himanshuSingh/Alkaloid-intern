@@ -33,7 +33,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
                 as="h2"
                 id="objectives-heading"
                 variant="olive"
-                className="text-[20px] font-semibold  lg:text-[28px] 2xl:text-[35px] leading-relaxed"
+                className="text-[20px] font-medium  lg:text-[28px] 2xl:text-[35px] "
               >
                 OBJECTIVES
                 <br className="hidden lg:block" />
@@ -41,7 +41,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
               </SectionHeading>
             </motion.div>
 
-            <div className="flex flex-col gap-4 mt-2">
+            <div className="flex flex-col gap-4   ">
               {data.objectives.map((obj) => (
                 <motion.p
                   key={obj.id}
@@ -65,7 +65,7 @@ export default function ObjectivesSection({ data }: ObjectivesSectionProps) {
             <ImageCard
               src={data.imageSrc}
               alt={data.imageAlt}
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full rounded-lg h-full"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>

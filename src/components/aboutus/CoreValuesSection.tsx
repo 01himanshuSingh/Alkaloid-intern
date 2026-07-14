@@ -38,12 +38,13 @@ export default function CoreValuesSection({ data }: CoreValuesSectionProps) {
  
 
     {/* Image */}
-    <div className="relative w-full aspect-[3/4] min-h-[360px] md:min-h-[440px] overflow-hidden">
-
+    <div
+  className="relative w-full aspect-[3/4] md:min-h-[440px] lg:aspect-[3/3] 2xl:aspect-[3/3.5] overflow-hidden"
+>
       <ImageCard
         src={data.imageSrc}
         alt={data.imageAlt}
-        className="absolute inset-0 w-full h-full rounded-sm lg:rounded-none lg:rounded-r-sm"
+        className="absolute inset-0 w-full h-full rounded-sm  lg:rounded-md"
         sizes="(max-width: 1024px) 100vw, 45vw"
       />
 
@@ -51,7 +52,7 @@ export default function CoreValuesSection({ data }: CoreValuesSectionProps) {
       <div
         className="absolute  left-0 w-full px-5 pb-5 pt-10">
         <span
-          className="font-['Geologica',sans-serif] tracking-[0.3em] text-[10px] md:text-xs lg:text-[18px] 2xl:text-[21px] font-medium text-white uppercase"
+          className="font-['Geologica',sans-serif] tracking-[0.1em] text-[10px] md:text-xs lg:text-[18px] 2xl:text-[21px] font-medium text-white uppercase"
            style={{
           writingMode: "vertical-rl",
           transform: "rotate(180deg)",

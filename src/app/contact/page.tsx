@@ -291,8 +291,9 @@ export default function ContactSection() {
       aria-label="Contact Us"
       className="bg-neutral-50 py-28 lg:py-27 2xl:py-40 px-6 lg:px-10"
     >
-        <Container>
-      <div className="max-w-6xl 2xl:max-w-[1400px] mx-auto">
+       <div className="w-full max-w-[1800px] mx-auto px-2 md:px-8 lg:px-10 xl:px-14 2xl:px-20">
+
+  <div className="max-w-[1600px] mx-auto">
 
    <motion.div
   className="flex flex-col items-center text-center gap-6 mb-10"
@@ -355,7 +356,7 @@ export default function ContactSection() {
         </div>
 
       </div>
-      </Container>
+      </div>
     </section>
   );
 }
