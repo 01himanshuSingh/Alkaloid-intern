@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
-import { NAV_LINKS } from '@/data'
-import Container from '@/components/shared/Container'
 import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
+
+import { NAV_LINKS } from '@/data'
+import { cn } from '@/lib/utils'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,13 +22,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Prevent body scroll when mobile menu opens
   useEffect(() => {
-    if (isMobileOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = 'auto'
-    }
+    document.body.style.overflow = isMobileOpen ? 'hidden' : 'auto'
 
     return () => {
       document.body.style.overflow = 'auto'
@@ -36,30 +32,32 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={cn(
+        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
-      }`}
+          ? 'bg-white/85 backdrop-blur-xl shadow-md border-b border-white/20'
+          : 'bg-white/40 backdrop-blur-md'
+      )}
     >
-      <Container>
-        <nav className="flex items-center justify-between h-16 sm:h-[72px] lg:h-20 2xl:h-[110px]">
+      {/* Custom Container */}
+      <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-14 2xl:px-20">
+        <nav className="flex items-center justify-between h-[74px] sm:h-[82px] lg:h-[86px] xl:h-[80px] 2xl:h-[105px]">
 
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center shrink-0 z-50"
+            className="flex items-center shrink-0"
           >
             <APLLogo />
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
+          <ul className="hidden lg:flex items-center gap-10 xl:gap-14 2xl:gap-16">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative font-['Geologica'] font-500 text-[15px] xl:text-[17px] 2xl:text-[24px]   text-gray-800 hover:text-primaryBlue transition-colors duration-300 group"
+                  className="relative font-['Geologica'] text-[16px] xl:text-[17px] 2xl:text-[20px] font-medium tracking-[0.2px] text-slate-900 transition-all duration-300 hover:text-primaryBlue group"
                 >
                   {link.label}
 
@@ -72,41 +70,41 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden flex items-center justify-center w-10 h-10 rounded-md text-gray-700 hover:bg-gray-100 transition z-50"
-            aria-label="Toggle navigation menu"
+            className="lg:hidden flex items-center justify-center w-11 h-11 rounded-lg hover:bg-white/50 transition"
           >
             {isMobileOpen ? (
-              <X size={24} />
+              <X size={28} />
             ) : (
-              <Menu size={24} />
+              <Menu size={28} />
             )}
           </button>
         </nav>
-      </Container>
+      </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       <div
-        className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-white transition-all duration-300 ease-in-out ${
+        className={cn(
+          'lg:hidden fixed top-0 right-0 h-screen w-full bg-white transition-all duration-300',
           isMobileOpen
             ? 'translate-x-0 opacity-100'
             : 'translate-x-full opacity-0 pointer-events-none'
-        }`}
+        )}
       >
-        <Container className="pt-24 pb-8">
-          <ul className="flex flex-col gap-2">
+        <div className="w-full px-6 pt-28">
+          <ul className="space-y-3">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   onClick={() => setIsMobileOpen(false)}
-                  className="block w-full font-['Geologica'] rounded-lg px-4 py-4 text-[16px] font-medium text-gray-700 hover:bg-gray-100 hover:text-primaryBlue transition"
+                  className="block rounded-xl px-5 py-4 text-lg font-medium text-slate-800 hover:bg-slate-100 hover:text-primaryBlue transition"
                 >
                   {link.label}
                 </Link>
               </li>
             ))}
           </ul>
-        </Container>
+        </div>
       </div>
     </header>
   )
@@ -114,13 +112,13 @@ export default function Navbar() {
 
 function APLLogo() {
   return (
-    <div className="relative w-[200px]  md:w-[220px] lg:w-[340px]  2xl:w-[400px]  h-[100px]  md:h-[105px] lg:h-[140px] 2xl:h-[200px]">
+    <div className="relative w-[260px]  md:w-[320px] lg:w-[450px] xl:w-[450px] 2xl:w-[620px] h-[70px] sm:h-[80px] md:h-[90px] lg:h-[110px] xl:h-[120px] 2xl:h-[130px]">
       <Image
         src="/PNG/Copy of Alkaloids Logo Files-04.png"
         alt="APL Logo"
         fill
-        className="object-contain"
         priority
+        className="object-contain object-left scale-110 "
       />
     </div>
   )

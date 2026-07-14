@@ -30,7 +30,7 @@ const cardVariants: Variants = {
     },
   },
 }
-export default function Events() {
+export default function Events() {   
   return (
     <section
       aria-labelledby="events-heading"
@@ -45,7 +45,7 @@ export default function Events() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-        <p className=" text-[20px] md:text-[20px] lg:text-[28px] 2xl:text-[35px] font-bold tracking-[2px] uppercase  text-[#0B67B2]">
+        <p className=" text-[20px] md:text-[20px] lg:text-[29px] 2xl:text-[37px] font-semibold tracking-[2px] uppercase  text-[#0B67B2]">
   UPCOMING EVENTS & PARTICIPATION
 </p>
           <h2

@@ -64,7 +64,7 @@ export default function Manufacturing() {
             transition={{ duration: 0.7, ease: 'easeOut' }}
           >
             <h2
-              className="font-['Geologica'] font-semibold leading-tight mb-8"
+              className="font-['Geologica'] font-medium leading-tight mb-8"
               style={{
                 fontSize: 'clamp(25px, 4vw, 48px)',
                 letterSpacing: '-1px',
@@ -108,33 +108,30 @@ export default function Manufacturing() {
             className="relative flex flex-col items-center"
             aria-label="Manufacturing facility gallery"
           >
-            <div className="relative mx-auto w-full max-w-sm">
+            <div
+  className="relative mx-auto w-full max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[460px] 2xl:max-w-[560px]"
+>
               {/* Top Hexagon */}
-              <HexagonCard
-                imageSrc="/Homepage/manufacturing and sourcing 1.png"
-                imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
-                widthClass="w-[160px] lg:w-[240px]"
-                heightClass="h-[180px] lg:h-[268px]"
-                positionClass="ml-auto mr-8"
-                // FIX: pass undefined on mobile so no y/scale transform is applied
-                y={isMobile ? undefined : topY}
-                scale={isMobile ? undefined : topScale}
-                priority
-              />
+             <HexagonCard
+  imageSrc="/Homepage/manufacturing and sourcing 1.png"
+  imageAlt="Alkaloids pharmaceutical manufacturing facility interior"
+  widthClass="w-[220px] sm:w-[260px] md:w-[300px] lg:w-[300px] 2xl:w-[350px]"
+  heightClass="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[330px] 2xl:h-[400px]"
+  positionClass="ml-auto mr-0 sm:mr-2 md:mr-4 lg:mr-8 2xl:mr-12"
+  y={isMobile ? undefined : topY}
+  scale={isMobile ? undefined : topScale}
+  priority
+/>
 
-              {/* Bottom Hexagon */}
-              <HexagonCard
-                imageSrc="/Homepage/manufacturing and sourcing 2.png"
-                imageAlt="Pharmaceutical manufacturing experts inspecting production line"
-                widthClass="w-[180px] lg:w-[240px]"
-                heightClass="h-[180px] lg:h-[266px]"
-                // FIX: changed md: prefix to lg: so overlap only fires on desktop
-                positionClass="ml-4 mt-4 lg:ml-6 lg:-mt-[60px]"
-                // FIX: pass undefined on mobile so no y/scale transform is applied
-                y={isMobile ? undefined : bottomY}
-                scale={isMobile ? undefined : bottomScale}
-              />
-            </div>
+<HexagonCard
+  imageSrc="/Homepage/manufacturing and sourcing 2.png"
+  imageAlt="Pharmaceutical manufacturing experts inspecting production line"
+  widthClass="w-[220px] sm:w-[260px] md:w-[300px] lg:w-[300px] 2xl:w-[350px]"
+  heightClass="h-[240px] sm:h-[280px] md:h-[330px] lg:h-[330px] 2xl:h-[400px]"
+  positionClass="ml-2 sm:ml-4 md:ml-6 mt-4 sm:mt-5 md:mt-6 lg:ml-8 lg:-mt-[75px] 2xl:ml-10 2xl:-mt-[95px]"
+  y={isMobile ? undefined : bottomY}
+  scale={isMobile ? undefined : bottomScale}
+/>            </div>
           </motion.section>
         </div>
       </Container>
@@ -173,7 +170,7 @@ function HexagonCard({
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.7 }}
-      className={`relative overflow-hidden rounded-2xl ${widthClass} ${heightClass} ${positionClass}`}
+      className={`relative overflow-hidden  ${widthClass} ${heightClass} ${positionClass}`}
     >
       <Image
         src={imageSrc}

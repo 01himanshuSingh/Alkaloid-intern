@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#005A9C' }} className="py-12 md:py-16">
   
-       <div className={'max-w-full lg:max-w-7xl 2xl:max-w-[1670px]  mx-auto px-6 md:px-10 lg:px-10'}>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8  md:gap-8 lg:gap-10">
+       <div className={'max-w-full lg:max-w-8xl 2xl:max-w-[1670px]  mx-auto px-6 md:px-8 lg:px-8'}>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8  md:gap-8 lg:gap-10 ">
           {/* Logo Column */}
-          <div className="flex flex-col pl-0">
+          <div className="flex flex-col pl-0 ">
             <APLLogoWhite />
           </div>
 
@@ -77,14 +77,14 @@ export default function Footer() {
 function APLLogoWhite() {
   return (
     <div className="relative
-      w-[140px]
+      w-[160px]
       md:w-[280px]
-      lg:w-[420px]
+      lg:w-[470px]
       2xl:w-[500px]
       h-[90px]
       md:h-[90px]
-      lg:h-[120px]
-      2xl:h-[140px]
+      lg:h-[180px]
+      2xl:h-[240px]
       overflow-visible"
     >
     <Image
