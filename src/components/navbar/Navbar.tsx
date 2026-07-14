@@ -112,7 +112,7 @@ export default function Navbar() {
 
 function APLLogo() {
   return (
-    <div className="relative w-[260px]  md:w-[320px] lg:w-[450px] xl:w-[450px] 2xl:w-[620px] h-[70px] sm:h-[80px] md:h-[90px] lg:h-[110px] xl:h-[120px] 2xl:h-[130px]">
+    <div className="relative w-[290px]  md:w-[320px] lg:w-[450px] xl:w-[450px] 2xl:w-[620px] h-[90px]  md:h-[90px] lg:h-[110px] xl:h-[120px] 2xl:h-[130px]">
       <Image
         src="/PNG/Copy of Alkaloids Logo Files-04.png"
         alt="APL Logo"
