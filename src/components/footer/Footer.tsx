@@ -9,12 +9,12 @@ export default function Footer() {
        <div className={'max-w-full lg:max-w-8xl 2xl:max-w-[1670px]  mx-auto px-6 md:px-8 lg:px-8'}>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8  md:gap-8 lg:gap-10 ">
           {/* Logo Column */}
-          <div className="flex flex-col pl-0 ">
+          <div className="relative z-0 flex flex-col pl-0 ">
             <APLLogoWhite />
           </div>
 
           {/* Our Office */}
-          <div>
+          <div className="relative z-10">
             <h4 className="font-montserrat font-700 text-white text-sm md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR OFFICE
             </h4>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           {/* Our Factory */}
-          <div>
+          <div className="relative z-10">
             <h4 className="font-montserrat font-700 text-white text-[15px] md:text-[0.9rem] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               OUR FACTORY
             </h4>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="relative z-10">
             <h4 className="font-montserrat font-700 text-[#88A933] text-[16px] lg:text-[24px] 2xl:text-[28px] tracking-[2px] uppercase mb-4">
               QUICK LINKS
             </h4>
@@ -85,7 +85,8 @@ function APLLogoWhite() {
       md:h-[90px]
       lg:h-[180px]
       2xl:h-[240px]
-      overflow-visible"
+      overflow-visible
+      pointer-events-none"
     >
     <Image
   src="/PNG/Copy of Alkaloids Logo Files-06 3.png"
