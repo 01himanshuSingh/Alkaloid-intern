@@ -45,7 +45,7 @@ export default function ProductGrid({
             No products listed in this category yet.
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             {products.map((product, i) => (
               <ProductCard
                 key={product.id}

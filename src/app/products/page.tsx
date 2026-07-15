@@ -204,7 +204,7 @@ export default function ProductsPage() {
         aria-label="Product Listing"
         className="bg-white"
       >
-        <ProductsShell />
+        <ProductsShell />    
       </section>
 
     </main>

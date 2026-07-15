@@ -10,44 +10,103 @@ interface ProductCardProps {
   onClick: (product: ProductDetail) => void;
 }
 
-export default function ProductCard({ product, index, onClick }: ProductCardProps) {
+export default function ProductCard({
+  product,
+  index,
+  onClick,
+}: ProductCardProps) {
   return (
-    <motion.article
-      variants={fadeInUp}
-      custom={index}
-      initial="hidden"
-      animate="visible"
-      whileHover={{ y: -2, boxShadow: "0 8px 24px rgba(30,64,120,0.12)" }}
-      transition={{ type: "spring", stiffness: 300, damping: 28 }}
-      className="group bg-white border border-gray-200 rounded-sm cursor-pointer hover:border-[#1d4ed8]/30 transition-colors duration-200"
-      onClick={() => onClick(product)}
-      aria-label={`View details for ${product.name}`}
-    >
-      <button
-        className="w-full text-left flex items-center gap-4 p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1d4ed8] focus-visible:ring-inset rounded-sm"
-        tabIndex={0}
+   <motion.article
+  variants={fadeInUp}
+  custom={index}
+  initial="hidden"
+  animate="visible"
+  whileHover={{
+    scale: 1.01,
+    zIndex: 10,
+  }}
+  transition={{
+    duration: 0.25,
+    ease: "easeOut",
+  }}
+  className="group relative bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-xl hover:border-[#88A933]"
+    onClick={() => onClick(product)}
+>
+<div
+  className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#88A933] transition-all duration-300 group-hover:w-full"
+/>
+   <button
         type="button"
+        className="w-full text-left focus:outline-none"
       >
-        {/* Name & certification */}
-        <div className="flex-1 min-w-0">
-          <h3 className="text-[12px]  md:text-base lg:text-[14px] 2xl:text-[18px] font-['Geologica'] font-semibold text-[#1d4ed8] leading-snug truncate group-hover:text-[#1e40af]">
-            {product.name}
-          </h3>
-          {product.certification && (
-            <p className="font-['Libre_Baskerville'] text-[9px] md:text-base lg:text-[14px] 2xl:text-[15px] text-gray-500 mt-0.5 truncate">{product.certification}</p>
-          )}
+        <div className="flex items-center justify-between gap-5 py-7 lg:py-8">
+
+          {/* Product Name */}
+          <div className="flex-1 min-w-0">
+           <h3
+  className="font-['Libre_Baskerville'] text-[15px] lg:text-[22px] 2xl:text-[28px] text-[#222] font-normal leading-snug"
+>
+  {product.name}
+</h3>
+          </div>
+
+          {/* Certification */}
+          <div
+            className="hidden md:block w-[180px] lg:w-[240px] 2xl:w-[280px] text-left shrink-0"
+          >
+            <p
+              className="font-['Libre_Baskerville'] text-[14px] lg:text-[18px] 2xl:text-[22px] text-[#333]"
+            >
+              {product.certification}
+            </p>
+          </div>
+
+          {/* Hexagon */}
+          <motion.div
+            whileHover={{ rotate: 90 }}
+            transition={{ duration: 0.25 }}
+            className="shrink-0"
+          >
+            <svg
+              width="42"
+              height="48"
+              viewBox="0 0 42 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="transition-all duration-300"
+            >
+              <path
+                d="M21 2L38 12V36L21 46L4 36V12L21 2Z"
+                stroke="#88A933"
+                strokeWidth="1.5"
+                className="group-hover:fill-[#88A933]/10"
+              />
+
+              <path
+                d="M21 16V30"
+                stroke="#88A933"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+
+              <path
+                d="M14 23H28"
+                stroke="#88A933"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </motion.div>
+
         </div>
 
-        {/* Chevron */}
-        <motion.span
-          className="flex-shrink-0 w-6 h-6 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-[#1d4ed8] group-hover:text-[#1d4ed8] transition-colors duration-200"
-          animate={{ x: 0 }}
-          whileHover={{ x: 2 }}
-        >
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} aria-hidden="true">
-            <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </motion.span>
+        {/* Mobile Certification */}
+        <div className="md:hidden pb-6">
+          <p className="font-['Libre_Baskerville'] text-[12px] text-gray-500">
+            {product.certification}
+          </p>
+        </div>
+
       </button>
     </motion.article>
   );

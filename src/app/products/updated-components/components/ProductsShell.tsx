@@ -15,8 +15,6 @@ export default function ProductsShell() {
     openProduct,
     closeDialog,
     navigateToProduct,
-    similarProducts,
-    otherProducts,
   } = useProduct();
 
   return (
@@ -39,8 +37,7 @@ export default function ProductsShell() {
         isOpen={isDialogOpen}
         onClose={closeDialog}
         onNavigate={navigateToProduct}
-        similarProducts={similarProducts}
-        otherProducts={otherProducts}
+        productsInCategory={productsInCategory}
       />
     </>
   );
