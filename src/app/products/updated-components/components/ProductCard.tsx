@@ -39,7 +39,7 @@ export default function ProductCard({
         type="button"
         className="w-full text-left focus:outline-none"
       >
-        <div className="flex items-center justify-between gap-5 py-7 lg:py-8">
+        <div className="flex items-center justify-between gap-5 py-2 px-1 lg:py-8">
 
           {/* Product Name */}
           <div className="flex-1 min-w-0">
