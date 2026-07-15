@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { ProductDetail } from "../types/product";
 import { dialogScale, backdropFade } from "../lib/animations";
 import ProductDetails from "./ProductDetails";
-import SynonymsSection from "./SimilarProducts";
+import SynonymsSection from "./SynonymsSection ";
 
 interface ProductDialogProps {
   product: ProductDetail | null;
