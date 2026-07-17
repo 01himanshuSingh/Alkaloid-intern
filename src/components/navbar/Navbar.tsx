@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       {/* Custom Container */}
       <div className="w-full max-w-[1800px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-14 2xl:px-20">
-        <nav className="flex items-center justify-between h-[74px] sm:h-[82px] lg:h-[86px] xl:h-[80px] 2xl:h-[105px]">
+        <nav className="flex items-center justify-between h-[74px] sm:h-[82px] lg:h-[86px] xl:h-[80px] 2xl:h-[125px]">
 
           {/* Logo */}
           <Link

@@ -96,14 +96,31 @@ export default function ProductDialog({
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
-              <button
-                onClick={onClose}
-                aria-label="Close dialog"
-                type="button"
-                className="absolute -top-3 -right-3 sm:top-4 sm:right-4 z-20 w-9 h-9 flex items-center justify-center rounded-full bg-white text-gray-500 shadow-md ring-1 ring-black/5 transition-colors hover:text-gray-800 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1d4ed8]"
-              >
-                <X size={18} strokeWidth={2} />
-              </button>
+             <button
+  onClick={onClose}
+  aria-label="Close dialog"
+  type="button"
+  className="absolute -top-4 -right-4 sm:top-4 sm:right-4 z-20 w-12 h-12 flex items-center justify-center bg-white text-black shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gray-400 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+  style={{
+    clipPath:
+      "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
+  }}
+>
+  {/* Inner Border */}
+  <span
+    className="absolute inset-[2px] border border-gray-200 group-hover:border-white/30"
+    style={{
+      clipPath:
+        "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
+    }}
+  />
+
+  <X
+    size={19}
+    strokeWidth={2.5}
+    className="relative z-10"
+  />
+</button>
 
               {/* Previous Button */}
              {prevProduct && (

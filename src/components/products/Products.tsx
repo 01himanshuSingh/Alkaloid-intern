@@ -27,7 +27,7 @@ function AnimatedText({
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: shouldReduceMotion ? 0 : 0.15, // was 0.08
+      staggerChildren: shouldReduceMotion ? 0 : 0.35, // was 0.08
       delayChildren: 0.2,
     },
   },
@@ -183,7 +183,7 @@ function ProductCard({ product }: { product: ProductItem }) {
       className="group relative overflow-hidden rounded-2xl bg-white"
     >
       {/* Product Image */}
-      <div className="relative aspect-[4/5] w-full mb-15 overflow-hidden">
+      <div className="relative aspect-[4/5] w-full mb-20 overflow-hidden">
         <Image
           src={product.imageSrc}
           alt={product.imageAlt}
