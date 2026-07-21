@@ -87,8 +87,7 @@ export default function ProductCategoryTabs({
         <div className="hidden md:block overflow-x-auto scrollbar-none">
           <ul
             role="tablist"
-            className="inline-flex items-center gap-3 min-w-max rounded-sm bg-[#F8FAFC] p-2 border border-slate-200"
-          >
+           className="inline-flex items-center gap-3 min-w-max p-0 border-0 bg-transparent"          >
             {PRODUCT_CATEGORIES.map((cat) => {
               const isActive = cat.id === activeCategory;
 

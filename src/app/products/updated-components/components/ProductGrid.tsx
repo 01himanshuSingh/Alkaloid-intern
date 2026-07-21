@@ -30,14 +30,12 @@ export default function ProductGrid({
         id={`panel-${activeCategory}`}
         role="tabpanel"
         aria-labelledby={`tab-${activeCategory}`}
-        className="p-8"
+        className="px-5 py-4 lg:px-8 lg:py-5"
       >
         {/* Category heading */}
         <header className="mb-6">
-          <h2 className="font-['Geologica'] text-[24px] md:text-5xl lg:text-4xl 2xl:text-5xl pb-2 font-semibold text-[#0B67B2] leading-tight">{meta?.label}</h2>
-          {meta?.description && (
-            <p className="font-['Libre_Baskerville'] text-[12px] md:text-base lg:text-[14px] 2xl:text-[18px] text-[#374151]">{meta.description}</p>
-          )}
+          <h2 className="font-['Geologica'] text-[24px] md:text-5xl lg:text-4xl 2xl:text-5xl pb-2 lg:pb-0 font-semibold text-[#0B67B2] leading-tight">{meta?.label}</h2>
+         
         </header>
 
         {products.length === 0 ? (

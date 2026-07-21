@@ -39,12 +39,12 @@ export default function ProductCard({
         type="button"
         className="w-full text-left focus:outline-none"
       >
-        <div className="flex items-center justify-between gap-5 py-2 px-1 lg:py-8">
+        <div className="flex items-center justify-between gap-5 py-5 lg:py-5 px-0">
 
           {/* Product Name */}
           <div className="flex-1 min-w-0">
            <h3
-  className="font-['Libre_Baskerville'] text-[15px] lg:text-[22px] 2xl:text-[28px] text-[#222] font-normal leading-snug"
+  className="font-['Libre_Baskerville'] text-[17px] lg:text-[18px] 2xl:text-[20px] font-normal text-[#1D1D1D] leading-normal"
 >
   {product.name}
 </h3>
@@ -52,10 +52,10 @@ export default function ProductCard({
 
           {/* Certification */}
           <div
-            className="hidden md:block w-[180px] lg:w-[240px] 2xl:w-[280px] text-left shrink-0"
+            className="hidden md:block w-[170px] lg:w-[190px] 2xl:w-[210px] text-left shrink-0"
           >
             <p
-              className="font-['Libre_Baskerville'] text-[14px] lg:text-[18px] 2xl:text-[22px] text-[#333]"
+              className="font-['Libre_Baskerville'] text-[15px] lg:text-[16px] 2xl:text-[17px] text-[#333]"
             >
               {product.certification}
             </p>

@@ -21,17 +21,27 @@ export default function OverlayText({ text, className }: OverlayTextProps) {
       animate="visible"
       variants={fadeUpVariants}
     >
-      <div className="max-w-xs md:max-w-sm lg:max-w-md 2xl:max-w-[730px]">
-        <p
-          className={cn(
-            "font-200 font-light",
-            "text-white   leading-relaxed",
-            "text-base md:text-lg lg:text-[27px]  2xl:text-[38px]",
-            "drop-shadow-md"
-          )}
-        >
-          {text}
-        </p>
+      <div className="max-w-sm md:max-w-lg lg:max-w-[620px] 2xl:max-w-[760px]">
+      <p
+  className={cn(
+    // Typography
+    "font-light tracking-normal",
+
+    // Color
+    "text-white",
+
+    // Line height (reduced)
+    "leading-[1.2] md:leading-[1.18] lg:leading-[1.10]",
+
+    // Font sizes
+    "text-base md:text-lg lg:text-[27px] 2xl:text-[38px]",
+
+    // Softer shadow
+    "drop-shadow-sm"
+  )}
+>
+  {text}
+</p>
       </div>
     </motion.div>
   );

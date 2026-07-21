@@ -130,7 +130,7 @@ export default function Hero() {
     ease: 'easeOut' as const,
   }
   const pointerEventsClass = isVisible ? 'pointer-events-auto' : 'pointer-events-none'
-
+const shouldShowOverlay = isMuted
   return (
     <section
       className="relative w-full min-h-screen flex items-center overflow-hidden cursor-pointer"
@@ -158,9 +158,22 @@ export default function Hero() {
         </video>
 
         {/* Gradient overlays — pointer-events-none so clicks pass through */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-black/20 z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none" />
-      </div>
+       <motion.div
+    animate={{
+        opacity: shouldShowOverlay ? 1 : 0
+    }}
+    transition={{ duration: 0.8 }}
+    className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/40 to-black/20 z-10 pointer-events-none"
+/>
+
+<motion.div
+    animate={{
+        opacity: shouldShowOverlay ? 1 : 0
+    }}
+    transition={{ duration: 0.8 }}
+    className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10 pointer-events-none"
+/>
+            </div>
 
       {/* ── Floating play/pause button (z-30) ──────────────────────────── */}
       <motion.div
