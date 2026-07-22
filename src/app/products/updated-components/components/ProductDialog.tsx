@@ -92,7 +92,7 @@ export default function ProductDialog({
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="relative w-full max-w-4xl lg:max-w-5xl 2xl:max-w-6xl"
+              className="relative w-full max-w-5xl lg:max-w-6xl 2xl:max-w-7xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -100,7 +100,7 @@ export default function ProductDialog({
   onClick={onClose}
   aria-label="Close dialog"
   type="button"
-  className="absolute -top-4 -right-4 sm:top-4 sm:right-4 z-20 w-12 h-12 flex items-center justify-center bg-white text-black shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gray-400 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
+  className="absolute top-1 lg:top-4 right-1 lg:right-4 sm:top-4 sm:right-4 z-20 w-8 h-8 flex items-center justify-center bg-white text-black shadow-xl transition-all duration-300 hover:scale-110 hover:bg-gray-400 hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2"
   style={{
     clipPath:
       "polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%)",
@@ -155,7 +155,7 @@ export default function ProductDialog({
               {/* Card */}
               <div className="relative overflow-hidden rounded-md shadow-2xl max-h-[85vh] flex flex-col">
                 <div className="overflow-y-auto flex-1 bg-white">
-                  <div className="px-6 py-8 sm:px-10 sm:py-10">
+                  <div className="px-8 py-8 sm:px-12 sm:py-12 lg:px-14 lg:py-12">
                     <ProductDetails product={product} />
                   </div>
 

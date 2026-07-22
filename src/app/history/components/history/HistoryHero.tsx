@@ -60,12 +60,12 @@ export function HistoryHero({ data }: HistoryHeroProps) {
         variants={overlayTextVariants}
         initial="hidden"
         animate="visible"
-        className="absolute top-24 right-6 sm:top-10 sm:right-10 md:top-12 lg:top-28 2xl:top-32 md:right-14 z-10 text-right max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg "
+        className="absolute top-24 right-6 sm:top-10 sm:right-10 md:top-12 lg:top-28 2xl:top-32 md:right-14 z-10 text-right max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl "
       >
-        <h1
-          className="font-geologica text-white/60 font-thin leading-tight tracking-tight"
-          style={{ fontSize: "clamp(1.6rem, 4.5vw, 3.2rem)" }}
-        >
+      <h1
+  className="font-geologica text-white font-light leading-[1.05] tracking-tight "
+  style={{ fontSize: "clamp(1.6rem, 4.5vw, 3.2rem)" }}
+>
           {data.heading.split("\n").map((line, i) => (
             <span key={i} className="block">
               {line}

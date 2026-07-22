@@ -305,9 +305,9 @@ export default function ContactSection() {
   {/* First Row */}
   <div className="w-full flex justify-center">
     <h1 className="text-[22px] sm:text-[28px] lg:text-[42px] 2xl:text-[55px] font-['Geologica'] font-semibold tracking-tight text-[#0B67B2] leading-tight max-w-[1300px] lg:max-w-[1200px]">
-      For quality,  consistency,
+      For Quality,  Consistency,
   
-      reach out to us.
+      Reach Out to Us.
     </h1>
   </div>
 

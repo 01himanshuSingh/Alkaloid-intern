@@ -14,16 +14,19 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
     : [];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
       {/* ── LEFT: Product Image (single pre-composited image, no clipping) ── */}
       <div className="flex-shrink-0 w-full lg:w-56 flex items-start justify-center lg:justify-start mt-4 lg:mt-0">
-        <div className="relative w-48 sm:w-56 aspect-[4/5]">
+       <div
+className="relative w-56 sm:w-64 lg:w-72 aspect-[4/5] mx-auto"
+>
           <ProductImage
             src={product.image}
             alt={product.name}
             fill
             sizes="(max-width: 1024px) 50vw, 224px"
-            className="object-contain"
+            className="object-fill
+"
             priority
           />
         </div>
@@ -34,13 +37,14 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
         {/* Product Name */}
         <h2
           id="dialog-title"
-          className="text-[18px] md:text-[20px] 2xl:text-[35px] font-[Geologica] uppercase font-medium text-[#1d4ed8] mb-6 leading-tight"
+          className="text-[18px] md:text-[20px] 2xl:text-[35px] font-[Geologica] uppercase font-medium text-[#0B67B2] mb-6 leading-tight"
         >
           {product.name}
         </h2>
 
         {/* Two-column info grid: CAS/Therapeutic top row, DMF/Plant bottom row */}
-        <div className="grid grid-cols-2 gap-x-10 gap-y-5 mb-6">
+        <div className="grid grid-cols-2 gap-x-16
+gap-y-8 mb-6">
           <div>
             <p
               className="text-[14px] lg:text-[13px] 2xl:text-[20px] font-[Geologica] font-medium tracking-[0.15em] uppercase mb-1"
@@ -110,7 +114,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           >
             Certifications
           </p>
-          <ul className="space-y-0.5">
+          <ul className="space-y-1">
             {certList.length > 0 ? (
               certList.map((c, i) => (
                 <li

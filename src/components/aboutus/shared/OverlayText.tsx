@@ -21,7 +21,7 @@ export default function OverlayText({ text, className }: OverlayTextProps) {
       animate="visible"
       variants={fadeUpVariants}
     >
-      <div className="max-w-sm md:max-w-lg lg:max-w-[620px] 2xl:max-w-[760px]">
+      <div className="max-w-sm md:max-w-lg lg:max-w-[520px] 2xl:max-w-[680px]">
       <p
   className={cn(
     // Typography
@@ -31,7 +31,7 @@ export default function OverlayText({ text, className }: OverlayTextProps) {
     "text-white",
 
     // Line height (reduced)
-    "leading-[1.2] md:leading-[1.18] lg:leading-[1.10]",
+    "leading-[1.2] md:leading-[1.18] lg:leading-[1]",
 
     // Font sizes
     "text-base md:text-lg lg:text-[27px] 2xl:text-[38px]",

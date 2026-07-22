@@ -2,7 +2,7 @@ import { HistoryPageData } from "../types/history";
 
 export const historyPageData: HistoryPageData = {
   hero: {
-    heading: "From Indian origins to\nglobal impact.",
+    heading: "From Indian Origins to\nGlobal Impact.",
     imageSrc: "/History page/Copy of cover.jpg",
     imageAlt: "APL Alkaloids team in a boardroom meeting",
     logoSrc: "/images/logo-white.svg",

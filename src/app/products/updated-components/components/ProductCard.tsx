@@ -22,24 +22,25 @@ export default function ProductCard({
   initial="hidden"
   animate="visible"
   whileHover={{
-    scale: 1.01,
     zIndex: 10,
   }}
   transition={{
     duration: 0.25,
     ease: "easeOut",
   }}
-  className="group relative bg-white border-b border-gray-200 transition-all duration-300 hover:shadow-xl hover:border-[#88A933]"
+ className="group relative bg-white border-b border-[#D9D9D9] transition-colors duration-300"
     onClick={() => onClick(product)}
 >
 <div
-  className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#88A933] transition-all duration-300 group-hover:w-full"
+className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#88A933] transition-all duration-300 group-hover:w-full"
 />
    <button
         type="button"
         className="w-full text-left focus:outline-none"
       >
-        <div className="flex items-center justify-between gap-5 py-5 lg:py-5 px-0">
+        <div
+  className="flex items-center justify-between gap-5 px-0 py-4 lg:px-5 lg:py-5 2xl:px-8"
+>
 
           {/* Product Name */}
           <div className="flex-1 min-w-0">
@@ -63,39 +64,34 @@ export default function ProductCard({
 
           {/* Hexagon */}
           <motion.div
-            whileHover={{ rotate: 90 }}
+           
             transition={{ duration: 0.25 }}
             className="shrink-0"
           >
-            <svg
-              width="42"
-              height="48"
-              viewBox="0 0 42 48"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="transition-all duration-300"
-            >
-              <path
-                d="M21 2L38 12V36L21 46L4 36V12L21 2Z"
-                stroke="#88A933"
-                strokeWidth="1.5"
-                className="group-hover:fill-[#88A933]/10"
-              />
+        <svg
+    width="30"
+    height="32"
+    viewBox="0 0 28 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+    <path
+    d="M15 1.8L27 8.5V25.5L15 32.2L3 25.5V8.5L15 1.8Z"
+    className="fill-transparent stroke-[#9CB050] stroke-[1.3] transition-all duration-200 group-hover:fill-[#9CB050]"
+  />
 
-              <path
-                d="M21 16V30"
-                stroke="#88A933"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
+  <path
+    d="M15 10V22"
+    className="stroke-[#9CB050] stroke-[1.7] transition-colors duration-200 group-hover:stroke-white"
+    strokeLinecap="round"
+  />
 
-              <path
-                d="M14 23H28"
-                stroke="#88A933"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+  <path
+    d="M9.5 16H20.5"
+    className="stroke-[#9CB050] stroke-[1.7] transition-colors duration-200 group-hover:stroke-white"
+    strokeLinecap="round"
+  />
+</svg>
           </motion.div>
 
         </div>

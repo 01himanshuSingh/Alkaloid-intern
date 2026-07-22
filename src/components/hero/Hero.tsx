@@ -211,7 +211,7 @@ const shouldShowOverlay = isMuted
           <button
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-black/35 backdrop-blur-xl border border-white/20 text-white transition-all duration-300 ease-out hover:bg-white/15 hover:scale-[1.08] active:scale-[0.98]"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-black/10 border border-white/15 backdrop-blur-sm text-white/80 transition-colors duration-300 hover:bg-black/20 hover:text-white "
           >
             {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
           </button>

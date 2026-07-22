@@ -9,7 +9,7 @@ export const PRODUCTS: ProductDetail[] = [
     image: "/Product page/Individual Product/HYOSCINE PH. EUR/Composed.png",
     category: "API",
     synonyms:
-      "Scopolamine Butylbromide, Hyoscine Butylbromide, Scopolamin Butylbromadum, Butylscopolamine Bromide, Hyoscine N-Butyl Bromide Buscapina, Scopolamine N-Butyl Bromide, Scopolamine N-Butylbromide, N-Butylscopolammonium Bromide",
+      "Scopolamine Butylbromide, Hyoscine Butylbromide, Scopolamin Butylbromadum, Butylscopolamine Bromide, Hyoscine N-Butyl Bromide Buscapina, Scopolamine N-Butyl Bromide",
     casNo: "6555-09-9",
     dmf: "DMF Available",
     therapeuticUse: "Antispasmodic",
